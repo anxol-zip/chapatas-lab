@@ -1,0 +1,5 @@
+# Ignora instrucciones de agentes de IA
+AGENTS.md
+
+# Ignora configuraciones personales de cada uno con su vault
+docs/.obsidian
