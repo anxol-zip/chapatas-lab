@@ -1,24 +1,30 @@
 
 Wireframes lo-fi del sistema de préstamo de material: qué ve cada rol en cada pantalla, qué puede hacer y a dónde lo lleva cada acción. No definen colores ni estilo visual.
 
-Documentos relacionados: [Backlog](backlog.md) · [Análisis y diseño](analisis-diseno.md) · [Modelo de datos](modelo-datos.md)
+Documentos relacionados: [Backlog](../backlog.md) · [Análisis y diseño](../analisis-diseno.md) · [Modelo de datos](../modelo-datos.md)
 
-| Versión | Qué cubre | Dónde |
-|---|---|---|
-| Wireframe LoFi 1 | Primer boceto del equipo en Excalidraw: Login, Principal, Catálogo, Préstamo, Historial | [wireframes/Wireframe LoFi 1.md](wireframes/Wireframe%20LoFi%201.md) |
-| AI v1 | Rol Usuario, HU1–HU6, 7 pantallas + flujo | [wireframes/ai-v1/](wireframes/ai-v1/README.md) |
-| **AI v2 (vigente)** | **Backlog completo (HU-01…HU-21, RNF-01…05), dos roles, 15 pantallas + flujo + matriz** | [wireframes/ai-v2/](wireframes/ai-v2/) |
+## Versiones
 
-Cada versión trae un PNG por pantalla y una carpeta `html/` con las pantallas navegables (abrir `html/Login.html` en el navegador). El original editable vive en un canvas de Claude Design; los PNG se renderizaron sin conexión, así que usan fuentes locales de respaldo.
+| Versión | Hecha | Qué cubre | Dónde |
+|---|---|---|---|
+| **Handmade** · LoFi 1 | A mano, Excalidraw | Primer boceto del equipo: Login, Principal, Catálogo, Préstamo, Historial | [handmade/Wireframe LoFi 1.md](handmade/Wireframe%20LoFi%201.md) (abrir en Obsidian con el plugin de Excalidraw) |
+| **Figma** | A mano, en clase | Ejercicio de clase | [demo_SD en Figma](https://www.figma.com/design/aPtkEi8sZ8v8nISSAZvPdC/demo_SD?node-id=0-1&t=zLAnDKltN3t4i3D7-1) |
+| **AI v1** | Claude Design | Rol Usuario, HU1–HU6: 7 pantallas + flujo | [ai-v1/](ai-v1/) · lienzo: <https://claude.ai/artifact/65pDvBnXTT32g3arPTEB5e> |
+| **AI v2 (vigente)** | Claude Design | Backlog completo (HU-01…HU-21, RNF-01…05), dos roles, 15 pantallas + flujo + matriz | [ai-v2/](ai-v2/) · mismo lienzo que v1, versión más reciente |
+| **AI v3** | Claude Design (Axel) | Inventario P1–P7 de [análisis y diseño](../analisis-diseno.md#6-inventario-de-pantallas): 9 pantallas, flujo y tabla pantalla-historia | [ai-v3/README.md](ai-v3/README.md) (flujo y tabla P1–P7) · lienzo: <https://claude.ai/artifact/188Rn9nRVPHJDvVzwazyXc> · prompt y declaración: [ai-v3/prompt.md](ai-v3/prompt.md) |
+
+`ai-v1/` y `ai-v2/` traen un PNG por pantalla y una carpeta `html/` navegable (abrir `html/Login.html` en el navegador); los PNG se renderizaron sin conexión, así que usan fuentes locales de respaldo. `ai-v3/` guarda las fuentes `.dc.html` del lienzo: dependen del runtime del editor, así que se ven desde el enlace del lienzo, no abriéndolas directo.
 
 > [!note] Numeración
-> Aquí se usan los IDs **HU-01…HU-21** y **RNF-01…05** de la Actividad 1 (backlog priorizado con MoSCoW), porque es la lista completa. [backlog.md](backlog.md) solo tiene HU1–HU6 y seis RNF; la equivalencia está en [Equivalencia con backlog.md](#equivalencia-con-backlogmd).
+> AI v2 usa los IDs **HU-01…HU-21** y **RNF-01…05** de la Actividad 1 (backlog priorizado con MoSCoW), porque es la lista completa. AI v1 y AI v3 usan **HU1–HU6** y **P1–P7** de [backlog.md](../backlog.md) y del análisis; la equivalencia está en [Equivalencia con backlog.md](#equivalencia-con-backlogmd).
+
+El resto de este documento describe **AI v2**, la versión vigente.
 
 ---
 
 ## Flujo de pantallas
 
-![Flujo de pantallas](wireframes/ai-v2/Main.png)
+![Flujo de pantallas](ai-v2/Main.png)
 
 Dos carriles: **alumno / profesor** arriba y **responsable del laboratorio** abajo. Cada flecha lleva la acción que la dispara. Las flechas punteadas en naranja son el camino de error. Las de puntos marcan el dato que cruza de un rol al otro: una solicitud que el responsable tiene que aprobar (HU-04) o una devolución que tiene que confirmar (HU-05).
 
@@ -27,8 +33,8 @@ Las cuatro condiciones de la actividad:
 | Pide la actividad | Dónde está |
 |---|---|
 | Historias Must con su número en cada pantalla | Chips `HU-nn · M/S/C` arriba a la derecha de cada pantalla |
-| Pantalla con el error de la regla | [A-06 · Sin existencias](wireframes/ai-v2/ErrorExistencias.png): RN7 / RNF-05, alguien pidió la última unidad |
-| Pantalla con estado vacío | [A-03 · Inicio sin préstamos](wireframes/ai-v2/InicioVacio.png) |
+| Pantalla con el error de la regla | [A-06 · Sin existencias](ai-v2/ErrorExistencias.png): RN7 / RNF-05, alguien pidió la última unidad |
+| Pantalla con estado vacío | [A-03 · Inicio sin préstamos](ai-v2/InicioVacio.png) |
 | Tres marcas de accesibilidad | 3.3.2 (etiqueta visible), 2.5.8 (objetivo ≥ 24 px) y 1.4.3 (contraste, sin depender del color), anotadas en naranja junto al elemento |
 
 ---
@@ -37,23 +43,23 @@ Las cuatro condiciones de la actividad:
 
 | Pantalla | Imagen | Historias | RNF | Equivale a (inventario §6) |
 |---|---|---|---|---|
-| **A-01** Inicio de sesión | [Login.png](wireframes/ai-v2/Login.png) | — | RNF-01, RNF-02 | P1 |
-| **A-02** Inicio del alumno | [Inicio.png](wireframes/ai-v2/Inicio.png) | HU-08, HU-10, HU-14, HU-20 | RNF-02 | *nueva* |
-| **A-03** Inicio vacío | [InicioVacio.png](wireframes/ai-v2/InicioVacio.png) | HU-08 | RNF-02 | *nueva* |
-| **A-04** Catálogo | [Catalogo.png](wireframes/ai-v2/Catalogo.png) | HU-06, HU-07, HU-12, HU-16 | RNF-02, RNF-05 | P2 |
-| **A-05** Mi solicitud | [Solicitud.png](wireframes/ai-v2/Solicitud.png) | HU-07, HU-08, HU-09, HU-16 | RNF-02 | P3 |
-| **A-06** Error: sin existencias | [ErrorExistencias.png](wireframes/ai-v2/ErrorExistencias.png) | HU-07, HU-09 | RNF-02, RNF-05 | P3 (error) |
-| **A-07** Solicitud enviada | [SolicitudEnviada.png](wireframes/ai-v2/SolicitudEnviada.png) | HU-04, HU-09, HU-14 | — | P4 |
-| **A-08** Registrar devolución | [Devolucion.png](wireframes/ai-v2/Devolucion.png) | HU-10, HU-14 | RNF-02 | *nueva* |
-| **A-09** Mi historial | [Historial.png](wireframes/ai-v2/Historial.png) | HU-13 | RNF-01, RNF-02 | P6 (vista del alumno) |
-| **R-01** Panel del responsable | [AdminPanel.png](wireframes/ai-v2/AdminPanel.png) | HU-04, HU-05, HU-11, HU-21 | — | P4, P5 |
-| **R-02** Préstamos activos | [AdminPrestamos.png](wireframes/ai-v2/AdminPrestamos.png) | HU-05, HU-08, HU-11 | — | P5 |
-| **R-03** Inventario | [AdminInventario.png](wireframes/ai-v2/AdminInventario.png) | HU-02, HU-03, HU-07, HU-18, HU-19 | — | P2 (vista del responsable) |
-| **R-04** Alta / edición de material | [AdminMaterial.png](wireframes/ai-v2/AdminMaterial.png) | HU-03, HU-18, HU-19 | RNF-02 | P7 |
-| **R-05** Historial general | [AdminHistorial.png](wireframes/ai-v2/AdminHistorial.png) | HU-01 | RNF-01 | P6 |
-| **R-06** Reportes mensuales | [AdminReportes.png](wireframes/ai-v2/AdminReportes.png) | HU-15 | — | *nueva* |
+| **A-01** Inicio de sesión | [Login.png](ai-v2/Login.png) | — | RNF-01, RNF-02 | P1 |
+| **A-02** Inicio del alumno | [Inicio.png](ai-v2/Inicio.png) | HU-08, HU-10, HU-14, HU-20 | RNF-02 | *nueva* |
+| **A-03** Inicio vacío | [InicioVacio.png](ai-v2/InicioVacio.png) | HU-08 | RNF-02 | *nueva* |
+| **A-04** Catálogo | [Catalogo.png](ai-v2/Catalogo.png) | HU-06, HU-07, HU-12, HU-16 | RNF-02, RNF-05 | P2 |
+| **A-05** Mi solicitud | [Solicitud.png](ai-v2/Solicitud.png) | HU-07, HU-08, HU-09, HU-16 | RNF-02 | P3 |
+| **A-06** Error: sin existencias | [ErrorExistencias.png](ai-v2/ErrorExistencias.png) | HU-07, HU-09 | RNF-02, RNF-05 | P3 (error) |
+| **A-07** Solicitud enviada | [SolicitudEnviada.png](ai-v2/SolicitudEnviada.png) | HU-04, HU-09, HU-14 | — | P4 |
+| **A-08** Registrar devolución | [Devolucion.png](ai-v2/Devolucion.png) | HU-10, HU-14 | RNF-02 | *nueva* |
+| **A-09** Mi historial | [Historial.png](ai-v2/Historial.png) | HU-13 | RNF-01, RNF-02 | P6 (vista del alumno) |
+| **R-01** Panel del responsable | [AdminPanel.png](ai-v2/AdminPanel.png) | HU-04, HU-05, HU-11, HU-21 | — | P4, P5 |
+| **R-02** Préstamos activos | [AdminPrestamos.png](ai-v2/AdminPrestamos.png) | HU-05, HU-08, HU-11 | — | P5 |
+| **R-03** Inventario | [AdminInventario.png](ai-v2/AdminInventario.png) | HU-02, HU-03, HU-07, HU-18, HU-19 | — | P2 (vista del responsable) |
+| **R-04** Alta / edición de material | [AdminMaterial.png](ai-v2/AdminMaterial.png) | HU-03, HU-18, HU-19 | RNF-02 | P7 |
+| **R-05** Historial general | [AdminHistorial.png](ai-v2/AdminHistorial.png) | HU-01 | RNF-01 | P6 |
+| **R-06** Reportes mensuales | [AdminReportes.png](ai-v2/AdminReportes.png) | HU-15 | — | *nueva* |
 
-La misma relación en forma de matriz: [Trazabilidad.png](wireframes/ai-v2/Trazabilidad.png).
+La misma relación en forma de matriz: [Trazabilidad.png](ai-v2/Trazabilidad.png).
 
 ## Historia → pantallas
 
@@ -92,11 +98,11 @@ Leída al revés, para comprobar que ninguna historia se quedó sin pantalla.
 
 ## Lo que el wireframe le pide al modelo de datos
 
-Dibujar las pantallas sacó campos y estados que el [modelo de datos](modelo-datos.md) todavía no tiene. No se cambió el modelo; queda para que el equipo decida.
+Dibujar las pantallas sacó campos y estados que el [modelo de datos](../modelo-datos.md) todavía no tiene. No se cambió el modelo; queda para que el equipo decida.
 
 | Lo pide | Pantallas | Qué falta en el modelo |
 |---|---|---|
-| Barra de existencias (HU-07) | A-04, A-05, R-03 | Cantidad total y disponible por material: es el **hueco 1** de [análisis y diseño](analisis-diseno.md#5-huecos-detectados-y-que-hicimos) y la decisión abierta #1 |
+| Barra de existencias (HU-07) | A-04, A-05, R-03 | Cantidad total y disponible por material: es el **hueco 1** de [análisis y diseño](../analisis-diseno.md#5-huecos-detectados-y-que-hicimos) y la decisión abierta #1 |
 | Descripción breve del material | A-04, A-05, R-04 | `Material.descripcion`: hoy solo existe `Categoria.descripcion` |
 | Fecha límite de devolución (HU-08) | A-02, A-05, R-02 | `Prestamo.fecha_limite`; `fecha_devolucion` es cuándo se devolvió de verdad. Tampoco está definido **quién fija** la fecha límite |
 | Aprobación (HU-04) y devolución en dos pasos (HU-10 → HU-05) | A-02, A-07, R-01 | Estados del préstamo en lugar del booleano `activo`: pendiente de aprobación, rechazada, activo, devolución por confirmar, cerrado |
@@ -134,19 +140,13 @@ Elementos dibujados que ninguna historia pide de forma literal. El equipo decide
 > [!warning] Las dos listas de RNF no coinciden
 > RNF5 significa cosas distintas en cada documento: *disponibilidad en horario* en backlog.md y *disponibilidad actualizada del inventario* en la Actividad 1. Hay que unificar antes de entregar.
 
-# Figma
-Ejercicio clase: https://www.figma.com/design/aPtkEi8sZ8v8nISSAZvPdC/demo_SD?node-id=0-1&t=zLAnDKltN3t4i3D7-1
-# Claude Design
-- [ai-v1](wireframes/ai-v1): https://claude.ai/artifact/65pDvBnXTT32g3arPTEB5e
-
-
 ---
 
 ## Declaración de uso de IA
 
 **Herramienta:** Claude Opus 5.5 (Anthropic), ejecutado mediante Claude Code con la herramienta de diseño Claude Design, en el entorno local de un integrante del equipo.
 
-**Contexto proporcionado:** los documentos de esta carpeta `docs/` ([backlog](backlog.md), [análisis y diseño](analisis-diseno.md), [modelo de datos](modelo-datos.md)), el boceto del equipo [Wireframe LoFi 1](wireframes/Wireframe%20LoFi%201.md), el diagrama de flujo de clase («El flujo de pantallas») y las notas de clase del integrante: *Actividad 1 — Backlog priorizado y RNF* y *Diseño de pantallas*. Sin búsquedas en internet.
+**Contexto proporcionado:** los documentos de la carpeta `docs/` ([backlog](../backlog.md), [análisis y diseño](../analisis-diseno.md), [modelo de datos](../modelo-datos.md)), el boceto del equipo [Wireframe LoFi 1](handmade/Wireframe%20LoFi%201.md), el diagrama de flujo de clase («El flujo de pantallas») y las notas de clase del integrante: *Actividad 1 — Backlog priorizado y RNF* y *Diseño de pantallas*. Sin búsquedas en internet.
 
 **Lo que hizo la IA:**
 

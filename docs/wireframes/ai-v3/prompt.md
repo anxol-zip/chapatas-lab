@@ -1,6 +1,6 @@
 # Prompt usado para el wireframe LoFi 2
 
-Registro del prompt con el que se generó el [wireframe LoFi 2](../wireframes.md), para declarar el uso de IA como pide la [Clase 8](../wireframes.md#contra-lo-que-pide-la-actividad-clase-8): *primero el papel, luego la IA, revisar y declarar*.
+Registro del prompt con el que se generó el [wireframe LoFi 2](README.md), para declarar el uso de IA como pide la [Clase 8](README.md#contra-lo-que-pide-la-actividad-clase-8): *primero el papel, luego la IA, revisar y declarar*.
 
 ## Herramienta
 
@@ -18,14 +18,14 @@ Primero se invocó `/design` sin descripción, y el modelo preguntó qué se que
 
 Solo lectura, sin búsquedas en internet:
 
-- **Este repositorio:** [analisis-diseno.md](../analisis-diseno.md) (matriz de trazabilidad, huecos, inventario de pantallas P1–P7, decisiones abiertas), [backlog.md](../backlog.md) (HU1–HU6 y RNF1–RNF6), [modelo-datos.md](../modelo-datos.md) (entidades y reglas RN1–RN7) y el boceto previo [Wireframe LoFi 1](Wireframe%20LoFi%201.md).
+- **Este repositorio:** [analisis-diseno.md](../../analisis-diseno.md) (matriz de trazabilidad, huecos, inventario de pantallas P1–P7, decisiones abiertas), [backlog.md](../../backlog.md) (HU1–HU6 y RNF1–RNF6), [modelo-datos.md](../../modelo-datos.md) (entidades y reglas RN1–RN7) y el boceto previo [Wireframe LoFi 1](../handmade/Wireframe%20LoFi%201.md).
 - **Vault de Obsidian:** las notas de la materia *Diseño de Software*, sobre todo *DISEÑO DE PANTALLAS* (Clase 8). De ahí salieron los requisitos de la actividad: el número de historia en cada pantalla, una pantalla con el error de la regla, una con estado vacío, las tres marcas WCAG (3.3.2, 2.5.8, 1.4.3) y el flujo con el camino de error.
 
 ## Resultado
 
 - Lienzo en línea: <https://claude.ai/artifact/188Rn9nRVPHJDvVzwazyXc>
-- Fuentes: [lofi-2/](lofi-2/)
-- Tabla pantalla-historia y flujo: [../wireframes.md](../wireframes.md)
+- Fuentes: esta carpeta, [ai-v3/](./)
+- Tabla pantalla-historia y flujo: [README.md](README.md)
 
 ## Lo que decidió el modelo por su cuenta
 
