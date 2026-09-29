@@ -5,13 +5,13 @@ Documentos relacionados: [Backlog](../backlog.md) · [Análisis y diseño](../an
 
 ## Versiones
 
-| Versión | Hecha | Qué cubre | Dónde |
-|---|---|---|---|
-| **Handmade** · LoFi 1 | A mano, Excalidraw | Primer boceto del equipo: Login, Principal, Catálogo, Préstamo, Historial | [handmade/Wireframe LoFi 1.md](handmade/Wireframe%20LoFi%201.md) (abrir en Obsidian con el plugin de Excalidraw) |
-| **Figma** | A mano, en clase | Ejercicio de clase | [demo_SD en Figma](https://www.figma.com/design/aPtkEi8sZ8v8nISSAZvPdC/demo_SD?node-id=0-1&t=zLAnDKltN3t4i3D7-1) |
-| **AI v1** | Claude Design | Rol Usuario, HU1–HU6: 7 pantallas + flujo | [ai-v1/](ai-v1/) · lienzo: <https://claude.ai/artifact/65pDvBnXTT32g3arPTEB5e> |
-| **AI v2 (vigente)** | Claude Design | Backlog completo (HU-01…HU-21, RNF-01…05), dos roles, 15 pantallas + flujo + matriz | [ai-v2/](ai-v2/) · mismo lienzo que v1, versión más reciente |
-| **AI v3** | Claude Design (Axel) | Inventario P1–P7 de [análisis y diseño](../analisis-diseno.md#6-inventario-de-pantallas): 9 pantallas, flujo y tabla pantalla-historia | [ai-v3/README.md](ai-v3/README.md) (flujo y tabla P1–P7) · lienzo: <https://claude.ai/artifact/188Rn9nRVPHJDvVzwazyXc> · prompt y declaración: [ai-v3/prompt.md](ai-v3/prompt.md) |
+| Versión               | Hecha                | Qué cubre                                                                                                                              | Dónde                                                                                                                                                                             |
+| --------------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Handmade** · LoFi 1 | A mano, Excalidraw   | Primer boceto del equipo: Login, Principal, Catálogo, Préstamo, Historial                                                              | [handmade/Wireframe LoFi 1.md](handmade/Wireframe%20LoFi%201.md) (abrir en Obsidian con el plugin de Excalidraw)                                                                  |
+| **Figma**             | A mano, en clase     | Ejercicio de clase                                                                                                                     | [demo_SD en Figma](https://www.figma.com/design/aPtkEi8sZ8v8nISSAZvPdC/demo_SD?node-id=0-1&t=zLAnDKltN3t4i3D7-1)                                                                  |
+| **AI v1**             | Claude Design        | Rol Usuario, HU1–HU6: 7 pantallas + flujo                                                                                              | [ai-v1/](ai-v1/) · lienzo: <https://claude.ai/artifact/65pDvBnXTT32g3arPTEB5e>                                                                                                    |
+| **AI v2 (vigente)**   | Claude Design        | Backlog completo (HU-01…HU-21, RNF-01…05), dos roles, 15 pantallas + flujo + matriz                                                    | [ai-v2/](ai-v2/) · mismo lienzo que v1, versión más reciente                                                                                                                      |
+| **AI v3**             | Claude Design (Axel) | Inventario P1–P7 de [análisis y diseño](../analisis-diseno.md#6-inventario-de-pantallas): 9 pantallas, flujo y tabla pantalla-historia | [ai-v3/README.md](ai-v3/README.md) (flujo y tabla P1–P7) · lienzo: <https://claude.ai/artifact/188Rn9nRVPHJDvVzwazyXc> · prompt y declaración: [ai-v3/prompt.md](ai-v3/prompt.md) |
 
 `ai-v1/` y `ai-v2/` traen un PNG por pantalla y una carpeta `html/` navegable (abrir `html/Login.html` en el navegador); los PNG se renderizaron sin conexión, así que usan fuentes locales de respaldo. `ai-v3/` guarda las fuentes `.dc.html` del lienzo: dependen del runtime del editor, así que se ven desde el enlace del lienzo, no abriéndolas directo.
 
@@ -124,18 +124,18 @@ Elementos dibujados que ninguna historia pide de forma literal. El equipo decide
 
 ## Equivalencia con backlog.md
 
-| backlog.md | Actividad 1 |
-|---|---|
-| HU1 · Ver el inventario | HU-02 |
-| HU2 · Seleccionar material | HU-09 |
-| HU3 · Registrar préstamo con usuario y fecha | HU-01, HU-04 |
-| HU4 · Descontar cantidad disponible | HU-07 |
-| HU5 · Registrar la devolución | HU-05, HU-10 |
-| HU6 · Consultar historial | HU-01 |
-| RNF1–RNF4 | RNF-01–RNF-04 |
-| RNF5 · Disponibilidad en horario de laboratorio | *no existe en la Actividad 1* |
-| RNF6 · Facilidad de uso | *no existe en la Actividad 1* |
-| *no existe en backlog.md* | RNF-05 · Disponibilidad actualizada del inventario |
+| backlog.md                                      | Actividad 1                                        |
+| ----------------------------------------------- | -------------------------------------------------- |
+| HU1 · Ver el inventario                         | HU-02                                              |
+| HU2 · Seleccionar material                      | HU-09                                              |
+| HU3 · Registrar préstamo con usuario y fecha    | HU-01, HU-04                                       |
+| HU4 · Descontar cantidad disponible             | HU-07                                              |
+| HU5 · Registrar la devolución                   | HU-05, HU-10                                       |
+| HU6 · Consultar historial                       | HU-01                                              |
+| RNF1–RNF4                                       | RNF-01–RNF-04                                      |
+| RNF5 · Disponibilidad en horario de laboratorio | *no existe en la Actividad 1*                      |
+| RNF6 · Facilidad de uso                         | *no existe en la Actividad 1*                      |
+| *no existe en backlog.md*                       | RNF-05 · Disponibilidad actualizada del inventario |
 
 > [!warning] Las dos listas de RNF no coinciden
 > RNF5 significa cosas distintas en cada documento: *disponibilidad en horario* en backlog.md y *disponibilidad actualizada del inventario* en la Actividad 1. Hay que unificar antes de entregar.
@@ -161,12 +161,5 @@ Elementos dibujados que ninguna historia pide de forma literal. El equipo decide
 - Las historias de usuario, su prioridad MoSCoW ni los RNF: vienen de la Actividad 1 del equipo.
 - El boceto original ni la estructura de navegación.
 - Decidir los huecos ni lo que sobra: quedan abiertos para el equipo.
-
-**Validación humana:**
-
-> [!question] Completar antes de entregar
-> - Integrantes que revisaron los wireframes y fecha:
-> - Qué se cambió después de la generación:
-> - Decisiones tomadas sobre «¿qué sobra?»:
 
 **El equipo asume la responsabilidad del contenido entregado.**
