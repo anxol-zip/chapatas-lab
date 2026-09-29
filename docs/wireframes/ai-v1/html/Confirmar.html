@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Confirmar préstamo</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Kalam:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#E9E7E1}
+a{color:#1F1F1C}a:hover{color:#000000}
+</style>
+</head>
+<body>
+<div style="width: 1280px; height: 880px; box-sizing: border-box; padding: 20px 32px 32px; background: #F6F5F1; display: flex; flex-direction: column; gap: 12px; font-family: 'IBM Plex Sans', sans-serif; color: #1F1F1C">
+<div style="height: 44px; display: flex; align-items: center; justify-content: space-between">
+<div style="display: flex; align-items: baseline; gap: 12px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; color: #55534E">P3 / P4</span>
+<span style="font-size: 20px; font-weight: 700">Confirmar préstamo</span>
+</div>
+<div style="display: flex; gap: 8px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; padding: 4px 10px; border: 1.5px solid #1F1F1C; border-radius: 6px; background: #FFFFFF">HU2</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; padding: 4px 10px; border: 1.5px solid #1F1F1C; border-radius: 6px; background: #FFFFFF">HU3</span>
+</div>
+</div>
+
+<div style="flex-grow: 1; border: 2px solid #1F1F1C; border-radius: 12px; background: #FFFFFF; overflow: hidden; display: flex; flex-direction: column">
+<nav style="height: 64px; flex-shrink: 0; display: flex; align-items: center; gap: 24px; padding: 0 24px; border-bottom: 2px solid #1F1F1C">
+<div style="display: flex; align-items: center; gap: 10px">
+<div style="width: 36px; height: 36px; border: 2px solid #1F1F1C; border-radius: 8px; background: #ECEAE4"></div>
+<span style="font-size: 16px; font-weight: 700">Chapatas Lab</span>
+</div>
+<div style="display: flex; gap: 8px; margin-left: 16px">
+<a href="Inicio.html" style="padding: 10px 16px; border-radius: 8px; font-size: 15px; font-weight: 500; text-decoration: none">Inicio</a>
+<a href="Catalogo.html" aria-current="page" style="padding: 10px 16px; border-radius: 8px; background: #1F1F1C; color: #FFFFFF; font-size: 15px; font-weight: 600; text-decoration: none">Catálogo</a>
+<a href="Historial.html" style="padding: 10px 16px; border-radius: 8px; font-size: 15px; font-weight: 500; text-decoration: none">Historial</a>
+</div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 12px">
+<div style="width: 36px; height: 36px; border: 2px solid #1F1F1C; border-radius: 50%; background: #ECEAE4"></div>
+<span style="font-size: 14px">[Nombre del alumno]</span>
+<a href="Login.html" style="padding: 8px 12px; border: 2px solid #1F1F1C; border-radius: 8px; font-size: 14px; text-decoration: none">Salir</a>
+</div>
+</nav>
+
+<main style="flex-grow: 1; padding: 24px 32px; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #55534E">
+<a href="Catalogo.html" style="color: #3A3935">Catálogo</a><span>/</span><span>Confirmar préstamo</span>
+</div>
+
+<div style="display: grid; grid-template-columns: 440px minmax(0, 1fr); gap: 36px; align-items: start">
+<div style="height: 360px; border: 2px solid #8A877F; border-radius: 10px; background: #ECEAE4; overflow: hidden"><svg width="100%" height="100%" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="0" x2="100%" y2="100%" stroke="#A8A59C" stroke-width="1.5"></line><line x1="100%" y1="0" x2="0" y2="100%" stroke="#A8A59C" stroke-width="1.5"></line></svg></div>
+
+<div style="display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<h1 style="margin: 0; font-size: 28px; font-weight: 700">[Nombre del material]</h1>
+<span style="font-size: 15px; color: #55534E">[Categoría] · Registro [ID]</span>
+</div>
+<span style="font-size: 16px; font-weight: 600">Disponibles: [N]</span>
+
+<dl style="margin: 0; padding: 18px 20px; border: 2px solid #1F1F1C; border-radius: 10px; display: grid; grid-template-columns: 180px minmax(0, 1fr); row-gap: 12px; font-size: 15px">
+<dt style="font-weight: 600; color: #3A3935">Solicitante</dt><dd style="margin: 0">[Nombre del alumno]</dd>
+<dt style="font-weight: 600; color: #3A3935">Fecha de inicio</dt><dd style="margin: 0">[dd/mm/aaaa hh:mm] (ahora)</dd>
+<dt style="font-weight: 600; color: #3A3935">Fecha de entrega</dt><dd style="margin: 0">[dd/mm/aaaa]</dd>
+</dl>
+
+<div style="display: flex; align-items: center; gap: 12px">
+<a href="Catalogo.html" style="height: 48px; padding: 0 22px; display: flex; align-items: center; border: 2px solid #1F1F1C; border-radius: 8px; font-size: 16px; font-weight: 600; text-decoration: none">Cancelar</a>
+<a href="Inicio.html" style="height: 48px; padding: 0 26px; display: flex; align-items: center; border-radius: 8px; background: #1F1F1C; color: #FFFFFF; font-size: 16px; font-weight: 600; text-decoration: none">Confirmar préstamo</a>
+<span style="font-family: Kalam, cursive; font-size: 14px; font-weight: 700; color: #9A3412; background: #FFEDD5; border: 1.5px solid #9A3412; border-radius: 999px; padding: 0 8px; line-height: 22px; white-space: nowrap">2.5.8 · 48 px</span>
+</div>
+
+<a href="ErrorPrestado.html" style="align-self: flex-start; font-family: Kalam, cursive; font-size: 15px; font-weight: 700; color: #9A3412">camino de error: alguien lo pidió primero →</a>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body>
+</html>

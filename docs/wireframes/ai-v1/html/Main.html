@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Flujo de pantallas</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Kalam:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#E9E7E1}
+a{color:#1F1F1C}a:hover{color:#000000}
+</style>
+</head>
+<body>
+<div style="width: 1500px; height: 900px; box-sizing: border-box; background: #F6F5F1; font-family: 'IBM Plex Sans', sans-serif; color: #1F1F1C; position: relative">
+<header style="position: absolute; left: 60px; top: 36px; right: 60px; display: flex; justify-content: space-between; align-items: flex-start; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; color: #55534E">CHAPATAS LAB · WIREFRAME LO-FI</span>
+<h1 style="margin: 0; font-size: 30px; font-weight: 700">Préstamo de material — flujo de pantallas</h1>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: #3A3935">
+<div style="display: flex; align-items: center; gap: 10px">
+<svg width="48" height="10" aria-hidden="true"><line x1="0" y1="5" x2="48" y2="5" stroke="#1F1F1C" stroke-width="2"></line></svg>
+<span>acción del usuario (lleva la etiqueta de lo que la dispara)</span>
+</div>
+<div style="display: flex; align-items: center; gap: 10px">
+<svg width="48" height="10" aria-hidden="true"><line x1="0" y1="5" x2="48" y2="5" stroke="#9A3412" stroke-width="2" stroke-dasharray="6 5"></line></svg>
+<span>camino de error y regreso</span>
+</div>
+<span style="color: #55534E">Inicio · Catálogo · Historial se alcanzan desde la barra superior en cualquier pantalla.</span>
+</div>
+</header>
+
+<div style="position: absolute; left: 0; top: 130px; width: 1500px; height: 760px">
+<svg width="1500" height="760" style="position: absolute; left: 0; top: 0" aria-hidden="true">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1F1C"></path></marker>
+<marker id="ahe" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9A3412"></path></marker>
+</defs>
+<g fill="none" stroke="#1F1F1C" stroke-width="2">
+<path d="M300,390 L436,390" marker-end="url(#ah)"></path>
+<path d="M180,460 L180,670 L436,670" marker-end="url(#ah)"></path>
+<path d="M684,390 L816,390" marker-start="url(#ah)" marker-end="url(#ah)"></path>
+<path d="M560,184 L560,316" marker-start="url(#ah)" marker-end="url(#ah)"></path>
+<path d="M1060,390 L1196,390" marker-end="url(#ah)"></path>
+<path d="M1320,320 L1320,270 L640,270 L640,316" marker-end="url(#ah)"></path>
+<path d="M680,650 L900,650 L900,464" marker-end="url(#ah)"></path>
+</g>
+<g fill="none" stroke="#9A3412" stroke-width="2" stroke-dasharray="7 6">
+<path d="M1320,460 L1320,596" marker-end="url(#ahe)"></path>
+<path d="M1200,690 L960,690 L960,464" marker-end="url(#ahe)"></path>
+</g>
+<g font-family="Kalam, cursive" font-size="17" font-weight="700" style="paint-order: stroke; stroke: #F6F5F1; stroke-width: 6px; stroke-linejoin: round">
+<text x="368" y="380" text-anchor="middle" fill="#1F1F1C">entra</text>
+<text x="190" y="560" fill="#1F1F1C">entra sin</text>
+<text x="190" y="580" fill="#1F1F1C">préstamos activos</text>
+<text x="750" y="380" text-anchor="middle" fill="#1F1F1C">pestaña</text>
+<text x="572" y="255" fill="#1F1F1C">pestaña Historial</text>
+<text x="1128" y="380" text-anchor="middle" fill="#1F1F1C">«Solicitar»</text>
+<text x="980" y="254" text-anchor="middle" fill="#1F1F1C">«Confirmar préstamo» → queda activo en Inicio</text>
+<text x="790" y="640" text-anchor="middle" fill="#1F1F1C">«Ir al catálogo»</text>
+<text x="1332" y="522" fill="#9A3412">el material ya</text>
+<text x="1332" y="542" fill="#9A3412">está prestado (RN1)</text>
+<text x="1080" y="716" text-anchor="middle" fill="#9A3412">«Volver al catálogo»</text>
+</g>
+</svg>
+
+<a href="Historial.html" style="position: absolute; left: 440px; top: 40px; width: 240px; height: 140px; box-sizing: border-box; padding: 14px 16px; border: 2px solid #1F1F1C; border-radius: 10px; background: #FFFFFF; text-decoration: none; color: #1F1F1C; display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #55534E">P6</span>
+<span style="font-size: 18px; font-weight: 700">Historial</span>
+<span style="font-size: 13px; color: #3A3935">Pedidos anteriores, detalle, fecha de inicio y de entrega</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500">HU6</span>
+</a>
+
+<a href="Login.html" style="position: absolute; left: 60px; top: 320px; width: 240px; height: 140px; box-sizing: border-box; padding: 14px 16px; border: 2px solid #1F1F1C; border-radius: 10px; background: #FFFFFF; text-decoration: none; color: #1F1F1C; display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #55534E">P1</span>
+<span style="font-size: 18px; font-weight: 700">Inicio de sesión</span>
+<span style="font-size: 13px; color: #3A3935">Credencial institucional</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500">RNF1</span>
+</a>
+
+<a href="Inicio.html" style="position: absolute; left: 440px; top: 320px; width: 240px; height: 140px; box-sizing: border-box; padding: 14px 16px; border: 2px solid #1F1F1C; border-radius: 10px; background: #FFFFFF; text-decoration: none; color: #1F1F1C; display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #55534E">SIN P#</span>
+<span style="font-size: 18px; font-weight: 700">Inicio</span>
+<span style="font-size: 13px; color: #3A3935">Préstamos activos y próxima fecha de entrega</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500">HU3 · HU5</span>
+</a>
+
+<a href="Catalogo.html" style="position: absolute; left: 820px; top: 320px; width: 240px; height: 140px; box-sizing: border-box; padding: 14px 16px; border: 2px solid #1F1F1C; border-radius: 10px; background: #FFFFFF; text-decoration: none; color: #1F1F1C; display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #55534E">P2</span>
+<span style="font-size: 18px; font-weight: 700">Catálogo</span>
+<span style="font-size: 13px; color: #3A3935">Cuadrícula de materiales y barra de búsqueda</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500">HU1 · HU2 · HU4</span>
+</a>
+
+<a href="Confirmar.html" style="position: absolute; left: 1200px; top: 320px; width: 240px; height: 140px; box-sizing: border-box; padding: 14px 16px; border: 2px solid #1F1F1C; border-radius: 10px; background: #FFFFFF; text-decoration: none; color: #1F1F1C; display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #55534E">P3 / P4</span>
+<span style="font-size: 18px; font-weight: 700">Confirmar préstamo</span>
+<span style="font-size: 13px; color: #3A3935">Material, solicitante y fechas</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500">HU2 · HU3</span>
+</a>
+
+<a href="InicioVacio.html" style="position: absolute; left: 440px; top: 600px; width: 240px; height: 140px; box-sizing: border-box; padding: 14px 16px; border: 2px dashed #1F1F1C; border-radius: 10px; background: #FFFFFF; text-decoration: none; color: #1F1F1C; display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #55534E">ESTADO VACÍO</span>
+<span style="font-size: 18px; font-weight: 700">Inicio sin préstamos</span>
+<span style="font-size: 13px; color: #3A3935">Lo primero que ve un alumno nuevo</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500">HU3 · HU5</span>
+</a>
+
+<a href="ErrorPrestado.html" style="position: absolute; left: 1200px; top: 600px; width: 240px; height: 140px; box-sizing: border-box; padding: 14px 16px; border: 2px dashed #9A3412; border-radius: 10px; background: #FFFFFF; text-decoration: none; color: #1F1F1C; display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #9A3412">ESTADO DE ERROR</span>
+<span style="font-size: 18px; font-weight: 700">Ya está prestado</span>
+<span style="font-size: 13px; color: #3A3935">Otro usuario lo pidió primero</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500">RN1 · HU4</span>
+</a>
+</div>
+</div>
+</body>
+</html>
