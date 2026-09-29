@@ -2,7 +2,7 @@
 
 Primera versión del wireframe lo-fi hecha con IA (Claude Design) a partir de [Wireframe LoFi 1](../Wireframe%20LoFi%201.md) y del [inventario de pantallas](../../analisis-diseno.md#6-inventario-de-pantallas). Cubre las seis historias HU1–HU6 del [backlog](../../backlog.md) desde el rol **Usuario**.
 
-La versión vigente, con el backlog completo, está en [wireframes.md](../../wireframes.md). Esta carpeta se conserva sin cambios para que se vea de dónde partimos.
+La versión vigente, con el backlog completo, está en [wireframes.md](MOC%20Wireframes.md). Esta carpeta se conserva sin cambios para que se vea de dónde partimos.
 
 | Pantalla | Imagen | Historias |
 |---|---|---|
