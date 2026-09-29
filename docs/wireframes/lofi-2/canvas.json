@@ -1,0 +1,157 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "AltaMaterial.dc.html": {
+      "h": 800,
+      "is_interactive": true,
+      "title": "P7 · Alta de material (hueco)",
+      "w": 1200,
+      "x": 3840,
+      "y": 2440
+    },
+    "Catalogo.dc.html": {
+      "h": 800,
+      "is_interactive": true,
+      "title": "P2 · Catálogo",
+      "w": 1200,
+      "x": 1280,
+      "y": 1220
+    },
+    "Confirmado.dc.html": {
+      "h": 800,
+      "is_interactive": true,
+      "title": "P4 · Préstamo registrado",
+      "w": 1200,
+      "x": 5120,
+      "y": 1220
+    },
+    "Devolucion.dc.html": {
+      "h": 800,
+      "is_interactive": true,
+      "title": "P5 · Devoluciones",
+      "w": 1200,
+      "x": 0,
+      "y": 2440
+    },
+    "DevolucionVacia.dc.html": {
+      "h": 800,
+      "is_interactive": true,
+      "title": "P5 · Estado vacío",
+      "w": 1200,
+      "x": 1280,
+      "y": 2440
+    },
+    "Flujo.dc.html": {
+      "h": 800,
+      "title": "Flujo de pantallas",
+      "w": 1600,
+      "x": 0,
+      "y": 0
+    },
+    "Historial.dc.html": {
+      "h": 800,
+      "is_interactive": true,
+      "title": "P6 · Historial",
+      "w": 1200,
+      "x": 2560,
+      "y": 2440
+    },
+    "Main.dc.html": {
+      "h": 800,
+      "is_interactive": true,
+      "title": "P1 · Inicio de sesión",
+      "w": 1200,
+      "x": 0,
+      "y": 1220
+    },
+    "Solicitud.dc.html": {
+      "h": 800,
+      "is_interactive": true,
+      "title": "P3 · Solicitud de préstamo",
+      "w": 1200,
+      "x": 2560,
+      "y": 1220
+    },
+    "SolicitudError.dc.html": {
+      "h": 800,
+      "is_interactive": true,
+      "title": "P3 · Error: ya no hay unidades",
+      "w": 1200,
+      "x": 3840,
+      "y": 1220
+    },
+    "Trazabilidad.dc.html": {
+      "h": 800,
+      "title": "Tabla pantalla-historia",
+      "w": 1200,
+      "x": 1680,
+      "y": 0
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-09-28T18:00:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "notes": {
+    "s1": {
+      "fill": "orange",
+      "maxH": 560,
+      "text": "Decisiones abiertas que este wireframe deja a la vista\n\n1. ¿Material por unidad física o con contador? Afecta los números \"4 de 5\" de P2 y P4 y el campo Unidades de P7.\n\n2. ¿Préstamo–Material es 1:N o N:M? P3 asume varios materiales en un solo préstamo (HU2).\n\n3. ¿Agregamos nombre y matrícula a Usuario? P4 y P6 los muestran y los usan para buscar (HU3, HU6).\n\n4. ¿Entra HU-03 (alta de material)? Sin P7 el catálogo nunca se llena.\n\n5. ¿La autenticación es propia o institucional? Cambia P1.",
+      "w": 400,
+      "x": 2960,
+      "y": 0
+    },
+    "s2": {
+      "fill": "blue",
+      "maxH": 360,
+      "text": "Cómo leer las marcas\n\nPestaña negra = historia o RNF que cubre la pantalla.\nPunteado azul = marca de accesibilidad WCAG (3.3.2, 2.5.8, 1.4.3).\nPunteado naranja = hueco del análisis (sección 5 de analisis-diseno.md).\nContorno negro = regla de negocio.\n\nLos datos de las tablas son de ejemplo.",
+      "w": 400,
+      "x": 2960,
+      "y": 620
+    },
+    "t0": {
+      "kind": "title1",
+      "maxW": 2880,
+      "text": "Flujo de pantallas y trazabilidad",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "t1": {
+      "kind": "title1",
+      "maxW": 6320,
+      "text": "Usuario: pedir material",
+      "w": 240,
+      "x": 0,
+      "y": 920
+    },
+    "t2": {
+      "kind": "title1",
+      "maxW": 5040,
+      "text": "Responsable: devolver, consultar y dar de alta",
+      "w": 240,
+      "x": 0,
+      "y": 2140
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "Catalogo.dc.html",
+    "Solicitud.dc.html",
+    "SolicitudError.dc.html",
+    "Confirmado.dc.html",
+    "Devolucion.dc.html",
+    "DevolucionVacia.dc.html",
+    "Historial.dc.html",
+    "AltaMaterial.dc.html",
+    "Flujo.dc.html",
+    "Trazabilidad.dc.html"
+  ],
+  "pages": [],
+  "title": "Wireframe Préstamo de Laboratorio"
+}

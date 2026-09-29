@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>P6 Historial de préstamos</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans',system-ui,sans-serif;color:#1d1d1b;background:#e9e7e1}
+a{color:#1d1d1b}a:hover{color:#2446b8}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;padding:4px 8px;border-radius:4px;background:#f4f3ef;color:#1d1d1b}
+.pid{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;padding:3px 8px;border:1.5px solid #f4f3ef;border-radius:4px}
+.a11y,.gap,.rule{display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:500;border-radius:4px;padding:3px 7px;line-height:1.35}
+.a11y{color:#1f3d9e;border:1.5px dashed #2446b8;background:#eef2fd}
+.gap{color:#8a3a06;border:1.5px dashed #c2610f;background:#fdf1e6}
+.rule{color:#1d1d1b;border:1.5px solid #1d1d1b;background:#f4f3ef}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 20px;border-radius:6px;font-family:inherit;font-size:15px;font-weight:600;text-decoration:none;box-sizing:border-box;cursor:pointer;white-space:nowrap}
+.pri{background:#1d1d1b;color:#fff;border:2px solid #1d1d1b}
+.sec{background:#fff;color:#1d1d1b;border:2px solid #1d1d1b}
+.nav{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:6px;font-size:15px;font-weight:500;text-decoration:none;color:#1d1d1b}
+.nav-on{background:#1d1d1b;color:#fff}
+a.nav-on:hover{color:#fff}
+.lbl{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.inp{display:block;height:44px;width:100%;box-sizing:border-box;border:2px solid #1d1d1b;border-radius:6px;padding:0 12px;font-family:inherit;font-size:15px;background:#fff;color:#1d1d1b}
+.muted{color:#5c5b57}
+.ph{background:repeating-linear-gradient(45deg,#f4f3ef 0 6px,#dcdad3 6px 8px);border:1.5px solid #8f8d86;border-radius:6px}
+.seg{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border:2px solid #1d1d1b;font-size:15px;font-weight:500;cursor:pointer;background:#fff}
+.row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.7fr) minmax(0,1fr) minmax(0,1fr) 130px;align-items:center;gap:12px;min-height:54px;padding:0 16px;border-bottom:1.5px solid #d6d4cd;font-size:15px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:14px;font-size:13px;font-weight:600;justify-self:start}
+.on{background:#1d1d1b;color:#fff}
+.done{background:#fff;color:#1d1d1b;border:1.5px solid #1d1d1b}
+</style>
+</helmet>
+<div style="width: 1200px; height: 800px; box-sizing: border-box; display: flex; flex-direction: column; background: #e9e7e1">
+<div style="height: 56px; flex-shrink: 0; display: flex; align-items: center; gap: 12px; padding: 0 24px; background: #1d1d1b; color: #fff">
+<span class="pid">P6</span>
+<span style="font-size: 17px; font-weight: 600">Historial de préstamos</span>
+<span style="flex-grow: 1"></span>
+<span class="tag">HU6</span>
+<span class="tag">RNF1</span>
+<span class="tag">RNF4</span>
+<span style="font-size: 13px; color: #d6d4cd">Vista: responsable del laboratorio</span>
+</div>
+<div style="flex-grow: 1; margin: 20px 24px 24px; background: #fff; border: 2px solid #1d1d1b; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 68px; flex-shrink: 0; display: flex; align-items: center; gap: 20px; padding: 0 24px; border-bottom: 2px solid #1d1d1b">
+<div style="display: flex; align-items: center; gap: 10px"><div class="ph" style="width: 32px; height: 32px"></div><span style="font-weight: 700; font-size: 16px">Préstamos · Laboratorio</span></div>
+<nav style="display: flex; gap: 4px; flex-grow: 1"><a href="Catalogo.dc.html" class="nav">Inventario</a><a href="Devolucion.dc.html" class="nav">Devoluciones</a><a href="Historial.dc.html" class="nav nav-on">Historial</a><a href="AltaMaterial.dc.html" class="nav">Alta de material</a></nav>
+<span class="muted" style="font-size: 14px">[Responsable] · Admin</span>
+<a href="Main.dc.html" class="btn sec" style="padding: 0 16px">Salir</a>
+</div>
+<div style="flex-grow: 1; display: flex; flex-direction: column; gap: 16px; padding: 24px 28px; min-height: 0">
+<h1 style="margin: 0; font-size: 26px">Historial de préstamos</h1>
+<div style="display: flex; align-items: flex-end; gap: 16px">
+<fieldset style="border: none; margin: 0; padding: 0">
+<legend class="lbl" style="padding: 0">Buscar por</legend>
+<div style="display: flex">
+<label class="seg" style="border-radius: 6px 0 0 6px; background: #1d1d1b; color: #fff"><input type="radio" name="por" checked> Persona</label>
+<label class="seg" style="border-radius: 0 6px 6px 0; border-left: none"><input type="radio" name="por"> Material</label>
+</div>
+</fieldset>
+<div style="flex-grow: 1">
+<label class="lbl" for="q">Nombre de la persona</label>
+<input class="inp" id="q" type="search" value="[Alumno C]">
+</div>
+<div style="width: 190px">
+<label class="lbl" for="st">Estado</label>
+<select class="inp" id="st"><option>Todos</option><option>Prestado</option><option>Devuelto</option></select>
+</div>
+<button class="btn pri" type="button">Buscar</button>
+</div>
+<div class="muted" style="font-size: 14px">3 préstamos de [Alumno C]</div>
+<div style="border: 1.5px solid #1d1d1b; border-radius: 8px; overflow: hidden">
+<div class="row" style="min-height: 42px; background: #f4f3ef; font-size: 13px; font-weight: 600">
+<span>Persona</span><span>Material</span><span>Prestado</span><span>Devuelto</span><span>Estado</span>
+</div>
+<div class="row">
+<span style="font-weight: 600">[Alumno C]</span><span>Multímetro digital · MT-009</span><span class="muted">20/09 · 12:15</span><span class="muted">—</span>
+<span class="chip on"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"></circle></svg>Prestado</span>
+</div>
+<div class="row">
+<span style="font-weight: 600">[Alumno C]</span><span>Cable UTP 2 m · RD-031</span><span class="muted">25/09 · 09:10</span><span class="muted">28/09 · 11:02</span>
+<span class="chip done"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Devuelto</span>
+</div>
+<div class="row" style="border-bottom: none">
+<span style="font-weight: 600">[Alumno C]</span><span>Protoboard · PB-110</span><span class="muted">12/09 · 08:30</span><span class="muted">13/09 · 17:45</span>
+<span class="chip done"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Devuelto</span>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span class="rule">HU6 · busca por persona o por material, con fecha y estado</span>
+<span class="gap">Hueco 2 · buscar «por nombre» necesita Usuario.nombre</span>
+<span class="rule">RN6 / RNF1 · solo el responsable ve a todos; un alumno recibe 403</span>
+<span class="rule">RNF4 · el historial se restaura completo tras una falla</span>
+<span class="a11y">3.3.2 · etiquetas visibles y legend en el grupo</span>
+<span class="a11y">Estado = texto + ícono + relleno, no solo color</span>
+</div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1200,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

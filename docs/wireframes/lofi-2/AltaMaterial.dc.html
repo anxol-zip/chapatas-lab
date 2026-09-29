@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>P7 Alta de material</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans',system-ui,sans-serif;color:#1d1d1b;background:#e9e7e1}
+a{color:#1d1d1b}a:hover{color:#2446b8}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;padding:4px 8px;border-radius:4px;background:#f4f3ef;color:#1d1d1b}
+.tag-gap{background:#fdf1e6;color:#8a3a06}
+.pid{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;padding:3px 8px;border:1.5px solid #f4f3ef;border-radius:4px}
+.a11y,.gap,.rule{display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:500;border-radius:4px;padding:3px 7px;line-height:1.35}
+.a11y{color:#1f3d9e;border:1.5px dashed #2446b8;background:#eef2fd}
+.gap{color:#8a3a06;border:1.5px dashed #c2610f;background:#fdf1e6}
+.rule{color:#1d1d1b;border:1.5px solid #1d1d1b;background:#f4f3ef}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 20px;border-radius:6px;font-family:inherit;font-size:15px;font-weight:600;text-decoration:none;box-sizing:border-box;cursor:pointer;white-space:nowrap}
+.pri{background:#1d1d1b;color:#fff;border:2px solid #1d1d1b}
+a.pri:hover{color:#fff;background:#2446b8;border-color:#2446b8}
+.sec{background:#fff;color:#1d1d1b;border:2px solid #1d1d1b}
+.nav{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:6px;font-size:15px;font-weight:500;text-decoration:none;color:#1d1d1b}
+.nav-on{background:#1d1d1b;color:#fff}
+a.nav-on:hover{color:#fff}
+.lbl{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.inp{display:block;height:44px;width:100%;box-sizing:border-box;border:2px solid #1d1d1b;border-radius:6px;padding:0 12px;font-family:inherit;font-size:15px;background:#fff;color:#1d1d1b}
+.hint{font-size:13px;margin-top:6px}
+.muted{color:#5c5b57}
+.ph{background:repeating-linear-gradient(45deg,#f4f3ef 0 6px,#dcdad3 6px 8px);border:1.5px solid #8f8d86;border-radius:6px}
+</style>
+</helmet>
+<div style="width: 1200px; height: 800px; box-sizing: border-box; display: flex; flex-direction: column; background: #e9e7e1">
+<div style="height: 56px; flex-shrink: 0; display: flex; align-items: center; gap: 12px; padding: 0 24px; background: #1d1d1b; color: #fff">
+<span class="pid">P7</span>
+<span style="font-size: 17px; font-weight: 600">Alta de material</span>
+<span style="flex-grow: 1"></span>
+<span class="tag tag-gap">Sin historia en HU1–HU6 · propuesta HU-03</span>
+<span style="font-size: 13px; color: #d6d4cd">Vista: responsable del laboratorio</span>
+</div>
+<div style="flex-grow: 1; margin: 20px 24px 24px; background: #fff; border: 2.5px dashed #c2610f; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 68px; flex-shrink: 0; display: flex; align-items: center; gap: 20px; padding: 0 24px; border-bottom: 2px solid #1d1d1b">
+<div style="display: flex; align-items: center; gap: 10px"><div class="ph" style="width: 32px; height: 32px"></div><span style="font-weight: 700; font-size: 16px">Préstamos · Laboratorio</span></div>
+<nav style="display: flex; gap: 4px; flex-grow: 1"><a href="Catalogo.dc.html" class="nav">Inventario</a><a href="Devolucion.dc.html" class="nav">Devoluciones</a><a href="Historial.dc.html" class="nav">Historial</a><a href="AltaMaterial.dc.html" class="nav nav-on">Alta de material</a></nav>
+<span class="muted" style="font-size: 14px">[Responsable] · Admin</span>
+<a href="Main.dc.html" class="btn sec" style="padding: 0 16px">Salir</a>
+</div>
+<div style="flex-grow: 1; display: flex; gap: 36px; padding: 24px 32px; min-height: 0">
+<div style="flex-grow: 1; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<h1 style="margin: 0; font-size: 26px">Dar de alta un material</h1>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 20px">
+<div>
+<label class="lbl" for="nom">Nombre del material</label>
+<input class="inp" id="nom" type="text" value="">
+</div>
+<div>
+<label class="lbl" for="reg">Número de registro</label>
+<input class="inp" id="reg" type="text" value="" aria-describedby="reg-h">
+<div class="hint muted" id="reg-h">Es el que buscas en el historial. No se puede repetir.</div>
+</div>
+<div>
+<label class="lbl" for="cat">Categoría</label>
+<select class="inp" id="cat"><option>Elige una categoría</option><option>Medición</option><option>Electrónica</option><option>Redes</option></select>
+</div>
+<div>
+<label class="lbl" for="uni">Unidades</label>
+<input class="inp" id="uni" type="number" value="1">
+<div style="margin-top: 8px"><span class="gap">Decisión abierta 1 · ¿contador o una fila por unidad física?</span></div>
+</div>
+<div>
+<label class="lbl" for="mat">Materia (opcional)</label>
+<input class="inp" id="mat" type="text" value="">
+<div style="margin-top: 8px"><span class="gap">Hueco 4 · ninguna historia lee este campo</span></div>
+</div>
+</div>
+<div style="display: flex; gap: 12px; margin-top: 6px">
+<a href="Catalogo.dc.html" class="btn pri">Guardar material</a>
+<a href="Devolucion.dc.html" class="btn sec">Cancelar</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span class="a11y">3.3.2 · cada campo con etiqueta arriba, ayuda ligada con aria-describedby</span>
+<span class="a11y">2.5.8 · controles de 44 px</span>
+</div>
+</div>
+<div style="width: 340px; flex-shrink: 0; align-self: flex-start; padding: 22px; border: 2px dashed #c2610f; border-radius: 8px; background: #fdf1e6; color: #8a3a06; display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 17px; font-weight: 700">Esta pantalla es el hueco 6</div>
+<div style="font-size: 15px; line-height: 1.5">El modelo necesita a alguien que escriba Material, pero ninguna de HU1–HU6 lo pide. Sin esta pantalla el catálogo arranca vacío y se queda vacío.</div>
+<div style="font-size: 15px; line-height: 1.5; font-weight: 600">Propuesta: incorporar HU-03 («ingresar nuevos materiales al inventario», Must en la Actividad 1).</div>
+</div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1200,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

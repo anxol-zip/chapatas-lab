@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Tabla pantalla-historia</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans',system-ui,sans-serif;color:#1d1d1b;background:#e9e7e1}
+.pid{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;padding:2px 6px;border:1.5px solid #1d1d1b;border-radius:4px;margin-right:6px}
+.row{display:grid;grid-template-columns:190px 150px minmax(0,1fr) 190px 170px;gap:14px;align-items:center;min-height:50px;padding:6px 16px;box-sizing:border-box;border-bottom:1.5px solid #d6d4cd;font-size:13.5px;line-height:1.35}
+.mono{font-family:'IBM Plex Mono',monospace;font-size:12.5px}
+.gp{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#8a3a06}
+.muted{color:#5c5b57}
+.ck{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.4}
+</style>
+</helmet>
+<div style="width: 1200px; height: 800px; box-sizing: border-box; display: flex; flex-direction: column; background: #fff">
+<div style="height: 56px; flex-shrink: 0; display: flex; align-items: center; gap: 12px; padding: 0 24px; background: #1d1d1b; color: #fff">
+<span style="font-size: 17px; font-weight: 600">Tabla pantalla-historia</span>
+<span style="flex-grow: 1"></span>
+<span style="font-size: 13px; color: #d6d4cd">Para docs/wireframes.md · cruza el backlog con las pantallas</span>
+</div>
+<div style="flex-grow: 1; display: flex; flex-direction: column; gap: 18px; padding: 20px 24px">
+<div style="border: 1.5px solid #1d1d1b; border-radius: 8px; overflow: hidden">
+<div class="row" style="min-height: 38px; background: #f4f3ef; font-size: 12.5px; font-weight: 600">
+<span>Pantalla</span><span>Historias / RNF</span><span>Qué muestra o captura</span><span>Marcas WCAG</span><span>Hueco / decisión</span>
+</div>
+<div class="row"><span style="font-weight: 600"><span class="pid">P1</span>Inicio de sesión</span><span class="mono">RNF1</span><span>Matrícula y contraseña; el rol decide a qué vista entra</span><span class="mono">3.3.2 · 2.5.8</span><span class="gp">Hueco 3 · decisión 9</span></div>
+<div class="row"><span style="font-weight: 600"><span class="pid">P2</span>Catálogo</span><span class="mono">HU1 HU2 HU4 RNF3</span><span>Material, registro, categoría y disponibles; agrega a la solicitud</span><span class="mono">3.3.2 · 2.5.8</span><span class="gp">Hueco 1 · decisión 1</span></div>
+<div class="row"><span style="font-weight: 600"><span class="pid">P3</span>Solicitud</span><span class="mono">HU2 RNF2 RNF6</span><span>Materiales elegidos, resumen y confirmación, completable con teclado</span><span class="mono">2.5.8 · 1.4.3</span><span class="gp">Decisión 2 (1:N / N:M)</span></div>
+<div class="row" style="background: #fdeceb"><span style="font-weight: 600; color: #9f1f17"><span class="pid" style="border-color: #9f1f17">P3</span>Error de la regla</span><span class="mono">HU2 HU4 RN7</span><span>«Ya no está disponible» con dos salidas: quitar y confirmar, o volver</span><span class="mono">1.4.3 · alert</span><span class="muted mono">La regla vive en el backend</span></div>
+<div class="row"><span style="font-weight: 600"><span class="pid">P4</span>Registrado</span><span class="mono">HU3 HU4</span><span>Quién, qué, cuándo y estado; disponibles antes → después</span><span class="mono">status · 2.5.8</span><span class="gp">Hueco 2 · hueco 7</span></div>
+<div class="row"><span style="font-weight: 600"><span class="pid">P5</span>Devoluciones</span><span class="mono">HU5 RNF2</span><span>Préstamos activos; confirma devolución (devuelto, disponible + 1)</span><span class="mono">3.3.2 · 2.5.8</span><span class="muted mono">—</span></div>
+<div class="row"><span style="font-weight: 600"><span class="pid">P5</span>Estado vacío</span><span class="mono">HU5</span><span>Cero préstamos activos y a dónde ir después</span><span class="mono">status · 2.5.8</span><span class="muted mono">—</span></div>
+<div class="row"><span style="font-weight: 600"><span class="pid">P6</span>Historial</span><span class="mono">HU6 RNF1 RNF4</span><span>Busca por persona o material; muestra fechas y estado</span><span class="mono">3.3.2 · color</span><span class="gp">Hueco 2 · decisión 5</span></div>
+<div class="row" style="border-bottom: none; background: #fdf1e6"><span style="font-weight: 600; color: #8a3a06"><span class="pid" style="border-color: #c2610f">P7</span>Alta de material</span><span class="gp">ninguna · HU-03?</span><span>Nombre, registro, categoría, unidades y materia</span><span class="mono">3.3.2 · 2.5.8</span><span class="gp">Huecos 4 y 6 · decisión 1</span></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 32px; padding: 18px 20px; border: 2px solid #1d1d1b; border-radius: 8px; background: #f4f3ef">
+<div style="grid-column: 1 / -1; font-size: 15px; font-weight: 700">Contra lo que pide la actividad de la clase 8</div>
+<div class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1d1d1b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px"><path d="M20 6 9 17l-5-5"></path></svg><span>Historias Must con su número en cada pantalla (HU1–HU6 son Must)</span></div>
+<div class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1d1d1b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px"><path d="M20 6 9 17l-5-5"></path></svg><span>Una pantalla con el error de la regla: P3 «Ya no está disponible»</span></div>
+<div class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1d1d1b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px"><path d="M20 6 9 17l-5-5"></path></svg><span>Una con estado vacío: P5 «Sin préstamos activos»</span></div>
+<div class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1d1d1b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px"><path d="M20 6 9 17l-5-5"></path></svg><span>Las tres marcas de accesibilidad: 3.3.2, 2.5.8 y 1.4.3</span></div>
+<div class="ck" style="grid-column: 1 / -1; color: #8a3a06"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c2610f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5"></path><path d="M12 16h.01"></path></svg><span>Leídas al revés: P7 no tiene historia. Hay que decidir si se justifica, se quita o falta HU-03.</span></div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1200,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

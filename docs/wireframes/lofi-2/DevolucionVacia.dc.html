@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>P5 Estado vacío</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans',system-ui,sans-serif;color:#1d1d1b;background:#e9e7e1}
+a{color:#1d1d1b}a:hover{color:#2446b8}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;padding:4px 8px;border-radius:4px;background:#f4f3ef;color:#1d1d1b}
+.pid{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;padding:3px 8px;border:1.5px solid #f4f3ef;border-radius:4px}
+.a11y,.gap,.rule{display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:500;border-radius:4px;padding:3px 7px;line-height:1.35}
+.a11y{color:#1f3d9e;border:1.5px dashed #2446b8;background:#eef2fd}
+.rule{color:#1d1d1b;border:1.5px solid #1d1d1b;background:#f4f3ef}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 20px;border-radius:6px;font-family:inherit;font-size:15px;font-weight:600;text-decoration:none;box-sizing:border-box;cursor:pointer;white-space:nowrap}
+.pri{background:#1d1d1b;color:#fff;border:2px solid #1d1d1b}
+a.pri:hover{color:#fff;background:#2446b8;border-color:#2446b8}
+.sec{background:#fff;color:#1d1d1b;border:2px solid #1d1d1b}
+.nav{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:6px;font-size:15px;font-weight:500;text-decoration:none;color:#1d1d1b}
+.nav-on{background:#1d1d1b;color:#fff}
+a.nav-on:hover{color:#fff}
+.muted{color:#5c5b57}
+.ph{background:repeating-linear-gradient(45deg,#f4f3ef 0 6px,#dcdad3 6px 8px);border:1.5px solid #8f8d86;border-radius:6px}
+</style>
+</helmet>
+<div style="width: 1200px; height: 800px; box-sizing: border-box; display: flex; flex-direction: column; background: #e9e7e1">
+<div style="height: 56px; flex-shrink: 0; display: flex; align-items: center; gap: 12px; padding: 0 24px; background: #1d1d1b; color: #fff">
+<span class="pid">P5</span>
+<span style="font-size: 17px; font-weight: 600">Devoluciones · estado vacío</span>
+<span style="flex-grow: 1"></span>
+<span class="tag">HU5</span>
+<span style="font-size: 13px; color: #d6d4cd">Vista: responsable del laboratorio</span>
+</div>
+<div style="flex-grow: 1; margin: 20px 24px 24px; background: #fff; border: 2px solid #1d1d1b; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 68px; flex-shrink: 0; display: flex; align-items: center; gap: 20px; padding: 0 24px; border-bottom: 2px solid #1d1d1b">
+<div style="display: flex; align-items: center; gap: 10px"><div class="ph" style="width: 32px; height: 32px"></div><span style="font-weight: 700; font-size: 16px">Préstamos · Laboratorio</span></div>
+<nav style="display: flex; gap: 4px; flex-grow: 1"><a href="Catalogo.dc.html" class="nav">Inventario</a><a href="Devolucion.dc.html" class="nav nav-on">Devoluciones</a><a href="Historial.dc.html" class="nav">Historial</a><a href="AltaMaterial.dc.html" class="nav">Alta de material</a></nav>
+<span class="muted" style="font-size: 14px">[Responsable] · Admin</span>
+<a href="Main.dc.html" class="btn sec" style="padding: 0 16px">Salir</a>
+</div>
+<div style="flex-grow: 1; display: flex; flex-direction: column; padding: 24px 28px; gap: 20px">
+<div><h1 style="margin: 0; font-size: 26px">Préstamos activos</h1><div class="muted" style="font-size: 15px; margin-top: 4px">0 materiales fuera del laboratorio</div></div>
+<div role="status" style="flex-grow: 1; border: 2px dashed #8f8d86; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; text-align: center">
+<div style="width: 96px; height: 96px; border-radius: 48px; border: 2px solid #1d1d1b; display: flex; align-items: center; justify-content: center; background: #f4f3ef"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1d1d1b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5V8z"></path><path d="M3 8l9 5 9-5"></path><path d="M12 13v8"></path></svg></div>
+<div style="font-size: 22px; font-weight: 700">No hay préstamos activos</div>
+<div class="muted" style="font-size: 16px; line-height: 1.5; max-width: 460px">Todo el material está en el laboratorio. Cuando alguien confirme un préstamo, aparecerá aquí para registrar su devolución.</div>
+<div style="display: flex; gap: 12px; margin-top: 4px">
+<a href="Catalogo.dc.html" class="btn pri">Ver inventario</a>
+<a href="Historial.dc.html" class="btn sec">Consultar historial</a>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span class="rule">Estado vacío: dice qué pasa y a dónde ir, no deja una tabla en blanco</span>
+<span class="a11y">role="status": se anuncia «0 préstamos activos»</span>
+<span class="a11y">2.5.8 · acciones de 44 px</span>
+</div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1200,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

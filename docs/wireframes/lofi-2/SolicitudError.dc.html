@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>P3 Error: ya no hay unidades</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans',system-ui,sans-serif;color:#1d1d1b;background:#e9e7e1}
+a{color:#1d1d1b}a:hover{color:#2446b8}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;padding:4px 8px;border-radius:4px;background:#f4f3ef;color:#1d1d1b}
+.tag-err{background:#fdeceb;color:#9f1f17}
+.pid{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;padding:3px 8px;border:1.5px solid #f4f3ef;border-radius:4px}
+.a11y,.gap,.rule{display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:500;border-radius:4px;padding:3px 7px;line-height:1.35}
+.a11y{color:#1f3d9e;border:1.5px dashed #2446b8;background:#eef2fd}
+.gap{color:#8a3a06;border:1.5px dashed #c2610f;background:#fdf1e6}
+.rule{color:#1d1d1b;border:1.5px solid #1d1d1b;background:#f4f3ef}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 20px;border-radius:6px;font-family:inherit;font-size:15px;font-weight:600;text-decoration:none;box-sizing:border-box;cursor:pointer;white-space:nowrap}
+.pri{background:#1d1d1b;color:#fff;border:2px solid #1d1d1b}
+a.pri:hover{color:#fff;background:#2446b8;border-color:#2446b8}
+.sec{background:#fff;color:#1d1d1b;border:2px solid #1d1d1b}
+.nav{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:6px;font-size:15px;font-weight:500;text-decoration:none;color:#1d1d1b}
+.nav-on{background:#1d1d1b;color:#fff}
+a.nav-on:hover{color:#fff}
+.muted{color:#5c5b57}
+.ph{background:repeating-linear-gradient(45deg,#f4f3ef 0 6px,#dcdad3 6px 8px);border:1.5px solid #8f8d86;border-radius:6px}
+.item{display:flex;gap:16px;align-items:center;padding:16px;border:2px solid #1d1d1b;border-radius:8px;background:#fff}
+.dl{display:grid;grid-template-columns:150px minmax(0,1fr);gap:10px 16px;font-size:15px}
+</style>
+</helmet>
+<div style="width: 1200px; height: 800px; box-sizing: border-box; display: flex; flex-direction: column; background: #e9e7e1">
+<div style="height: 56px; flex-shrink: 0; display: flex; align-items: center; gap: 12px; padding: 0 24px; background: #1d1d1b; color: #fff">
+<span class="pid">P3</span>
+<span style="font-size: 17px; font-weight: 600">Solicitud · camino de error</span>
+<span style="flex-grow: 1"></span>
+<span class="tag">HU2</span>
+<span class="tag">HU4</span>
+<span class="tag tag-err">RN7 no prestar más de lo que hay</span>
+<span style="font-size: 13px; color: #d6d4cd">Vista: usuario</span>
+</div>
+<div style="flex-grow: 1; margin: 20px 24px 24px; background: #fff; border: 2px solid #1d1d1b; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 68px; flex-shrink: 0; display: flex; align-items: center; gap: 24px; padding: 0 24px; border-bottom: 2px solid #1d1d1b">
+<div style="display: flex; align-items: center; gap: 10px"><div class="ph" style="width: 32px; height: 32px"></div><span style="font-weight: 700; font-size: 16px">Préstamos · Laboratorio</span></div>
+<nav style="display: flex; gap: 4px; flex-grow: 1"><a href="Catalogo.dc.html" class="nav">Catálogo</a><a href="Solicitud.dc.html" class="nav nav-on">Mi solicitud (2)</a></nav>
+<span class="muted" style="font-size: 14px">[Nombre del usuario] · Alumno</span>
+<a href="Main.dc.html" class="btn sec" style="padding: 0 16px">Salir</a>
+</div>
+<div style="flex-grow: 1; display: flex; flex-direction: column; gap: 18px; padding: 24px 32px; min-height: 0">
+<div role="alert" style="display: flex; gap: 16px; align-items: flex-start; padding: 18px 20px; border: 2.5px solid #9f1f17; border-radius: 8px; background: #fdeceb; color: #9f1f17">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg>
+<div style="flex-grow: 1; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 19px; font-weight: 700">El osciloscopio OS-002 ya no está disponible</div>
+<div style="font-size: 15px; line-height: 1.5">Otra persona confirmó la última unidad mientras revisabas. Tu préstamo no se registró: quítalo y confirma lo demás, o vuelve al catálogo.</div>
+</div>
+</div>
+<div style="display: flex; gap: 32px; flex-grow: 1; min-height: 0">
+<div style="flex-grow: 1; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+<div class="item">
+<div class="ph" style="width: 64px; height: 64px; flex-shrink: 0"></div>
+<div style="flex-grow: 1"><div style="font-size: 17px; font-weight: 600">Multímetro digital</div><div class="muted" style="font-size: 14px">MT-014 · 1 unidad · quedan 4 de 5</div></div>
+<button class="btn sec" type="button">Quitar</button>
+</div>
+<div class="item" style="border: 2.5px dashed #9f1f17; background: #fdeceb">
+<div class="ph" style="width: 64px; height: 64px; flex-shrink: 0"></div>
+<div style="flex-grow: 1"><div style="font-size: 17px; font-weight: 600; text-decoration: line-through">Osciloscopio</div><div style="font-size: 14px; color: #9f1f17; font-weight: 600">OS-002 · ya no disponible · 0 de 2</div></div>
+<button class="btn sec" type="button" style="border-color: #9f1f17; color: #9f1f17">Quitar</button>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span class="rule">RN7 · la regla vive en el backend: una transacción lee y descuenta a la vez</span>
+<span class="rule">La pantalla solo muestra el mensaje; esconder el botón no basta</span>
+</div>
+</div>
+<div style="width: 400px; flex-shrink: 0; display: flex; flex-direction: column; gap: 16px">
+<div style="padding: 24px; border: 2px solid #1d1d1b; border-radius: 8px; background: #f4f3ef; display: flex; flex-direction: column; gap: 16px">
+<div style="font-size: 18px; font-weight: 700">¿Qué quieres hacer?</div>
+<div class="dl">
+<span class="muted">Se puede prestar</span><span style="font-weight: 600">Multímetro digital</span>
+<span class="muted">No se puede</span><span style="font-weight: 600; color: #9f1f17">Osciloscopio</span>
+</div>
+<a href="Confirmado.dc.html" class="btn pri" style="width: 100%">Quitar y confirmar el resto</a>
+<a href="Catalogo.dc.html" class="btn sec" style="width: 100%">Volver al catálogo</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; align-items: flex-start">
+<span class="a11y">1.4.3 · rojo #9f1f17 sobre #fdeceb ≈ 6.6 : 1</span>
+<span class="a11y">Error con ícono + texto + tachado, no solo rojo</span>
+<span class="a11y">role="alert": el lector de pantalla lo anuncia</span>
+<span class="a11y">2.5.8 · acciones de 44 px</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1200,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

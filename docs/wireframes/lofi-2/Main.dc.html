@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>P1 Inicio de sesión</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans',system-ui,sans-serif;color:#1d1d1b;background:#e9e7e1}
+a{color:#1d1d1b}a:hover{color:#2446b8}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;padding:4px 8px;border-radius:4px;background:#f4f3ef;color:#1d1d1b}
+.pid{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;padding:3px 8px;border:1.5px solid #f4f3ef;border-radius:4px}
+.a11y,.gap,.rule{display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:500;border-radius:4px;padding:3px 7px;line-height:1.35}
+.a11y{color:#1f3d9e;border:1.5px dashed #2446b8;background:#eef2fd}
+.gap{color:#8a3a06;border:1.5px dashed #c2610f;background:#fdf1e6}
+.rule{color:#1d1d1b;border:1.5px solid #1d1d1b;background:#f4f3ef}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 20px;border-radius:6px;font-family:inherit;font-size:15px;font-weight:600;text-decoration:none;box-sizing:border-box;cursor:pointer;white-space:nowrap}
+.pri{background:#1d1d1b;color:#fff;border:2px solid #1d1d1b}
+a.pri:hover{color:#fff;background:#2446b8;border-color:#2446b8}
+.sec{background:#fff;color:#1d1d1b;border:2px solid #1d1d1b}
+.off{background:#eceae4;color:#5c5b57;border:2px dashed #8f8d86;cursor:not-allowed}
+.lbl{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.inp{display:block;height:44px;width:100%;box-sizing:border-box;border:2px solid #1d1d1b;border-radius:6px;padding:0 12px;font-family:inherit;font-size:15px;background:#fff;color:#1d1d1b}
+.muted{color:#5c5b57}
+.ph{background:repeating-linear-gradient(45deg,#f4f3ef 0 6px,#dcdad3 6px 8px);border:1.5px solid #8f8d86;border-radius:6px}
+</style>
+</helmet>
+<div style="width: 1200px; height: 800px; box-sizing: border-box; display: flex; flex-direction: column; background: #e9e7e1">
+<div style="height: 56px; flex-shrink: 0; display: flex; align-items: center; gap: 12px; padding: 0 24px; background: #1d1d1b; color: #fff">
+<span class="pid">P1</span>
+<span style="font-size: 17px; font-weight: 600">Inicio de sesión</span>
+<span style="flex-grow: 1"></span>
+<span class="tag">RNF1</span>
+<span style="font-size: 13px; color: #d6d4cd">Vista: cualquier rol</span>
+</div>
+<div style="flex-grow: 1; margin: 20px 24px 24px; background: #fff; border: 2px solid #1d1d1b; border-radius: 10px; overflow: hidden; display: flex">
+<div style="width: 460px; flex-shrink: 0; box-sizing: border-box; padding: 48px; background: #f4f3ef; border-right: 2px solid #1d1d1b; display: flex; flex-direction: column; gap: 20px">
+<div class="ph" style="width: 56px; height: 56px"></div>
+<h1 style="margin: 0; font-size: 30px; line-height: 1.2">Préstamo de material de laboratorio</h1>
+<p class="muted" style="margin: 0; font-size: 16px; line-height: 1.5">Consulta qué hay disponible, pide lo que te llevas y deja registro de cuándo lo devuelves.</p>
+<div style="flex-grow: 1"></div>
+<div style="display: flex; flex-direction: column; gap: 8px; align-items: flex-start">
+<span class="rule">RN6 · el rol decide la vista: usuario → Catálogo, responsable → Devoluciones</span>
+<span class="gap">Hueco 3 · Usuario no tiene campo de credencial (¿login propio o institucional?)</span>
+</div>
+</div>
+<div style="flex-grow: 1; display: flex; align-items: center; justify-content: center">
+<div style="width: 400px; display: flex; flex-direction: column; gap: 20px">
+<h2 style="margin: 0; font-size: 24px">Entrar</h2>
+<div>
+<label class="lbl" for="usr">Matrícula o número de nómina</label>
+<input class="inp" id="usr" type="text" value="">
+</div>
+<div>
+<label class="lbl" for="pwd">Contraseña</label>
+<input class="inp" id="pwd" type="password" value="">
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span class="a11y">3.3.2 · etiqueta visible, fuera de la caja</span>
+</div>
+<div role="alert" style="display: flex; gap: 10px; align-items: flex-start; padding: 12px 14px; border: 2px solid #9f1f17; border-radius: 6px; background: #fdeceb; color: #9f1f17; font-size: 14px; line-height: 1.45">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px"><circle cx="12" cy="12" r="10"></circle><path d="M12 7v6"></path><path d="M12 17h.01"></path></svg>
+<span>Zona de mensajes: «La matrícula o la contraseña no coinciden». Nunca dice cuál de las dos falló.</span>
+</div>
+<a href="Catalogo.dc.html" class="btn pri" style="width: 100%">Entrar</a>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span class="a11y">2.5.8 · botón de 44 px de alto</span>
+<span class="rule">RNF1 · sesión se cierra tras 30 min inactiva</span>
+</div>
+<div style="border-top: 1.5px dashed #8f8d86; padding-top: 14px; font-size: 13px" class="muted">Prototipo: <a href="Devolucion.dc.html">entrar como responsable del laboratorio</a></div>
+</div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1200,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

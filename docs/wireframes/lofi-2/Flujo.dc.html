@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Flujo de pantallas</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans',system-ui,sans-serif;color:#1d1d1b;background:#e9e7e1}
+.pid{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;padding:2px 6px;border:1.5px solid currentColor;border-radius:4px}
+.node{position:absolute;width:230px;height:88px;box-sizing:border-box;border:2px solid #1d1d1b;border-radius:8px;background:#fff;padding:12px 14px;display:flex;flex-direction:column;justify-content:center;gap:6px}
+.nt{display:flex;gap:8px;align-items:center;font-size:15px;font-weight:700}
+.hu{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5c5b57}
+.lab{position:absolute;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;background:#fff;padding:2px 6px;border-radius:4px;white-space:nowrap}
+.lane{position:absolute;left:16px;right:16px;border-radius:10px;background:#f4f3ef;border:1.5px solid #d6d4cd}
+.lanet{position:absolute;left:36px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#5c5b57}
+</style>
+</helmet>
+<div style="width: 1600px; height: 800px; box-sizing: border-box; display: flex; flex-direction: column; background: #fff">
+<div style="height: 56px; flex-shrink: 0; display: flex; align-items: center; gap: 12px; padding: 0 24px; background: #1d1d1b; color: #fff">
+<span style="font-size: 17px; font-weight: 600">Flujo de pantallas · préstamo de material de laboratorio</span>
+<span style="flex-grow: 1"></span>
+<span style="font-size: 13px; color: #d6d4cd">Cada flecha lleva la acción que la dispara · rojo punteado = camino de error</span>
+</div>
+<div style="position: relative; width: 1600px; height: 744px">
+<div class="lane" style="top: 16px; height: 318px"></div>
+<div class="lanet" style="top: 30px">Usuario · alumno o profesor</div>
+<div class="lane" style="top: 410px; height: 318px"></div>
+<div class="lanet" style="top: 424px">Responsable del laboratorio</div>
+<svg width="1600" height="744" viewBox="0 0 1600 744" style="position: absolute; left: 0; top: 0">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#1d1d1b"></path></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#9f1f17"></path></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#8f8d86"></path></marker>
+</defs>
+<g fill="none" stroke="#1d1d1b" stroke-width="2">
+<path d="M270 350 C325 350 325 124 376 124" marker-end="url(#ah)"></path>
+<path d="M270 394 C325 394 325 544 376 544" marker-end="url(#ah)"></path>
+<path d="M610 124 L736 124" marker-end="url(#ah)"></path>
+<path d="M970 124 L1096 124" marker-end="url(#ah)"></path>
+<path d="M610 544 L696 544" marker-end="url(#ah)"></path>
+<path d="M930 544 L1016 544" marker-end="url(#ah)"></path>
+<path d="M440 500 L440 172" marker-end="url(#ah)"></path>
+</g>
+<g fill="none" stroke="#9f1f17" stroke-width="2.2">
+<path d="M855 168 L855 216" marker-end="url(#ahr)"></path>
+<path d="M740 264 C640 264 520 250 520 172" stroke-dasharray="7 5" marker-end="url(#ahr)"></path>
+<path d="M970 264 C1080 264 1215 250 1215 172" stroke-dasharray="7 5" marker-end="url(#ahr)"></path>
+</g>
+<path d="M1250 544 L1336 544" fill="none" stroke="#8f8d86" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#ahg)"></path>
+</svg>
+<div class="node" style="left: 40px; top: 328px"><div class="nt"><span class="pid">P1</span>Inicio de sesión</div><div class="hu">RNF1 · el rol decide</div></div>
+<div class="node" style="left: 380px; top: 80px"><div class="nt"><span class="pid">P2</span>Catálogo</div><div class="hu">HU1 · HU2 · HU4</div></div>
+<div class="node" style="left: 740px; top: 80px"><div class="nt"><span class="pid">P3</span>Solicitud</div><div class="hu">HU2 · RNF2 · RNF6</div></div>
+<div class="node" style="left: 1100px; top: 80px"><div class="nt"><span class="pid">P4</span>Préstamo registrado</div><div class="hu">HU3 · HU4</div></div>
+<div class="node" style="left: 740px; top: 220px; border: 2.5px solid #9f1f17; background: #fdeceb; color: #9f1f17"><div class="nt"><span class="pid">P3</span>«Ya no está disponible»</div><div class="hu" style="color: #9f1f17">RN7 · no prestar más de lo que hay</div></div>
+<div class="node" style="left: 380px; top: 500px"><div class="nt"><span class="pid">P5</span>Devoluciones</div><div class="hu">HU5</div></div>
+<div class="node" style="left: 700px; top: 500px; border-style: dashed"><div class="nt"><span class="pid">P5</span>Sin préstamos activos</div><div class="hu">Estado vacío</div></div>
+<div class="node" style="left: 1020px; top: 500px"><div class="nt"><span class="pid">P6</span>Historial</div><div class="hu">HU6 · RNF1</div></div>
+<div class="node" style="left: 1340px; top: 500px; border: 2.5px dashed #c2610f; background: #fdf1e6; color: #8a3a06"><div class="nt"><span class="pid">P7</span>Alta de material</div><div class="hu" style="color: #8a3a06">Hueco 6 · falta HU-03</div></div>
+<div class="lab" style="left: 282px; top: 206px">Entrar · usuario</div>
+<div class="lab" style="left: 282px; top: 470px">Entrar · responsable</div>
+<div class="lab" style="left: 612px; top: 98px">Revisar solicitud</div>
+<div class="lab" style="left: 1000px; top: 98px">Confirmar</div>
+<div class="lab" style="left: 866px; top: 182px; color: #9f1f17">Confirmar · ya no hay unidades</div>
+<div class="lab" style="left: 560px; top: 272px; color: #9f1f17">Volver al catálogo</div>
+<div class="lab" style="left: 1000px; top: 272px; color: #9f1f17">Quitar y confirmar el resto</div>
+<div class="lab" style="left: 450px; top: 360px">Inventario (HU1)</div>
+<div class="lab" style="left: 608px; top: 516px">Último devuelto</div>
+<div class="lab" style="left: 932px; top: 516px">Ver historial</div>
+<div class="lab" style="left: 1260px; top: 516px; color: #5c5b57">Menú</div>
+<div style="position: absolute; left: 380px; top: 640px; display: flex; gap: 28px; align-items: center; font-size: 13px">
+<span style="display: flex; gap: 8px; align-items: center"><svg width="40" height="10"><path d="M0 5 L40 5" stroke="#1d1d1b" stroke-width="2"></path></svg>Acción del usuario</span>
+<span style="display: flex; gap: 8px; align-items: center; color: #9f1f17"><svg width="40" height="10"><path d="M0 5 L40 5" stroke="#9f1f17" stroke-width="2.2" stroke-dasharray="7 5"></path></svg>Camino de error</span>
+<span style="display: flex; gap: 8px; align-items: center; color: #8a3a06"><span style="width: 28px; height: 16px; border: 2px dashed #c2610f; background: #fdf1e6; border-radius: 3px"></span>Pantalla sin historia (hueco)</span>
+<span style="display: flex; gap: 8px; align-items: center; color: #5c5b57"><svg width="40" height="10"><path d="M0 5 L40 5" stroke="#8f8d86" stroke-width="2" stroke-dasharray="4 4"></path></svg>Navegación por menú</span>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1600,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

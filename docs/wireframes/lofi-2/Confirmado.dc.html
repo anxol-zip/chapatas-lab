@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>P4 Préstamo registrado</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans',system-ui,sans-serif;color:#1d1d1b;background:#e9e7e1}
+a{color:#1d1d1b}a:hover{color:#2446b8}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;padding:4px 8px;border-radius:4px;background:#f4f3ef;color:#1d1d1b}
+.pid{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;padding:3px 8px;border:1.5px solid #f4f3ef;border-radius:4px}
+.a11y,.gap,.rule{display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:500;border-radius:4px;padding:3px 7px;line-height:1.35}
+.a11y{color:#1f3d9e;border:1.5px dashed #2446b8;background:#eef2fd}
+.gap{color:#8a3a06;border:1.5px dashed #c2610f;background:#fdf1e6}
+.rule{color:#1d1d1b;border:1.5px solid #1d1d1b;background:#f4f3ef}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 20px;border-radius:6px;font-family:inherit;font-size:15px;font-weight:600;text-decoration:none;box-sizing:border-box;cursor:pointer;white-space:nowrap}
+.pri{background:#1d1d1b;color:#fff;border:2px solid #1d1d1b}
+a.pri:hover{color:#fff;background:#2446b8;border-color:#2446b8}
+.sec{background:#fff;color:#1d1d1b;border:2px solid #1d1d1b}
+.nav{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:6px;font-size:15px;font-weight:500;text-decoration:none;color:#1d1d1b}
+.nav-on{background:#1d1d1b;color:#fff}
+a.nav-on:hover{color:#fff}
+.muted{color:#5c5b57}
+.ph{background:repeating-linear-gradient(45deg,#f4f3ef 0 6px,#dcdad3 6px 8px);border:1.5px solid #8f8d86;border-radius:6px}
+.dl{display:grid;grid-template-columns:170px minmax(0,1fr);gap:14px 20px;font-size:16px;align-items:start}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:14px;font-size:13px;font-weight:600}
+.stock{display:grid;grid-template-columns:minmax(0,1fr) 70px 24px 70px;align-items:center;gap:8px;padding:12px 0;border-bottom:1.5px solid #d6d4cd;font-size:15px}
+</style>
+</helmet>
+<div style="width: 1200px; height: 800px; box-sizing: border-box; display: flex; flex-direction: column; background: #e9e7e1">
+<div style="height: 56px; flex-shrink: 0; display: flex; align-items: center; gap: 12px; padding: 0 24px; background: #1d1d1b; color: #fff">
+<span class="pid">P4</span>
+<span style="font-size: 17px; font-weight: 600">Préstamo registrado</span>
+<span style="flex-grow: 1"></span>
+<span class="tag">HU3</span>
+<span class="tag">HU4</span>
+<span style="font-size: 13px; color: #d6d4cd">Vista: usuario</span>
+</div>
+<div style="flex-grow: 1; margin: 20px 24px 24px; background: #fff; border: 2px solid #1d1d1b; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 68px; flex-shrink: 0; display: flex; align-items: center; gap: 24px; padding: 0 24px; border-bottom: 2px solid #1d1d1b">
+<div style="display: flex; align-items: center; gap: 10px"><div class="ph" style="width: 32px; height: 32px"></div><span style="font-weight: 700; font-size: 16px">Préstamos · Laboratorio</span></div>
+<nav style="display: flex; gap: 4px; flex-grow: 1"><a href="Catalogo.dc.html" class="nav">Catálogo</a><a href="Solicitud.dc.html" class="nav">Mi solicitud (0)</a></nav>
+<span class="muted" style="font-size: 14px">[Nombre del usuario] · Alumno</span>
+<a href="Main.dc.html" class="btn sec" style="padding: 0 16px">Salir</a>
+</div>
+<div style="flex-grow: 1; display: flex; gap: 32px; padding: 32px; min-height: 0">
+<div style="flex-grow: 1; min-width: 0; display: flex; flex-direction: column; gap: 22px">
+<div role="status" style="display: flex; gap: 16px; align-items: center">
+<div style="width: 56px; height: 56px; border-radius: 28px; background: #1d1d1b; color: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></div>
+<div><h1 style="margin: 0; font-size: 28px">Préstamo registrado</h1><div class="muted" style="font-size: 15px; margin-top: 4px">Folio [ID del préstamo] · muéstralo en ventanilla al recoger</div></div>
+</div>
+<div style="padding: 24px; border: 2px solid #1d1d1b; border-radius: 8px">
+<div class="dl">
+<span class="muted">Quién</span>
+<div style="display: flex; flex-direction: column; gap: 6px; align-items: flex-start"><span style="font-weight: 600">[Nombre del usuario] · [Matrícula]</span><span class="gap">Hueco 2 · Usuario no tiene «nombre» todavía</span></div>
+<span class="muted">Qué</span>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 600">Multímetro digital · MT-014</span><span style="font-weight: 600">Osciloscopio · OS-002</span></div>
+<span class="muted">Cuándo</span><span style="font-weight: 600">[28/09/2026 · 10:42]</span>
+<span class="muted">Estado</span><span><span class="chip" style="background: #1d1d1b; color: #fff">Prestado</span></span>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span class="rule">HU3 · se guarda artículo, usuario y fecha/hora</span>
+<span class="rule">RN4 · préstamo abierto: activo = true, sin fecha de devolución</span>
+<span class="a11y">role="status": se anuncia el éxito</span>
+</div>
+<div style="flex-grow: 1"></div>
+<div style="display: flex; gap: 12px">
+<a href="Catalogo.dc.html" class="btn pri">Volver al catálogo</a>
+</div>
+</div>
+<div style="width: 380px; flex-shrink: 0; display: flex; flex-direction: column; gap: 14px">
+<div style="padding: 24px; border: 2px solid #1d1d1b; border-radius: 8px; background: #f4f3ef">
+<div style="font-size: 18px; font-weight: 700; margin-bottom: 6px">Así quedó el inventario</div>
+<div class="muted" style="font-size: 14px; margin-bottom: 8px">Disponibles antes → después</div>
+<div class="stock"><span style="font-weight: 600">Multímetro digital</span><span class="muted" style="text-align: right">4 de 5</span><span style="text-align: center">→</span><span style="font-weight: 700">3 de 5</span></div>
+<div class="stock" style="border-bottom: none"><span style="font-weight: 600">Osciloscopio</span><span class="muted" style="text-align: right">1 de 2</span><span style="text-align: center">→</span><span style="font-weight: 700">0 de 2</span></div>
+</div>
+<span class="rule" style="align-self: flex-start">HU4 · baja en uno por cada unidad prestada</span>
+<span class="gap" style="align-self: flex-start">Hueco 7 · Material.estado lo actualiza este paso</span>
+</div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1200,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
