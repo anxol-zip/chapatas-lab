@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Panel del responsable</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Kalam:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#E9E7E1}
+a{color:#1F1F1C}a:hover{color:#000000}
+</style>
+</head>
+<body>
+<div style="width: 1280px; height: 1000px; box-sizing: border-box; padding: 20px 32px 32px; background: #F6F5F1; display: flex; flex-direction: column; gap: 12px; font-family: 'IBM Plex Sans', sans-serif; color: #1F1F1C">
+<div style="height: 44px; display: flex; align-items: center; justify-content: space-between">
+<div style="display: flex; align-items: baseline; gap: 12px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; color: #55534E">R-01</span>
+<span style="font-size: 20px; font-weight: 700">Panel del responsable</span>
+</div>
+<div style="display: flex; gap: 8px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; padding: 4px 10px; border: 1.5px solid #1F1F1C; border-radius: 6px; background: #FFFFFF">HU-04 · M</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; padding: 4px 10px; border: 1.5px solid #1F1F1C; border-radius: 6px; background: #FFFFFF">HU-05 · M</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; padding: 4px 10px; border: 1.5px solid #1F1F1C; border-radius: 6px; background: #FFFFFF">HU-11 · S</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; padding: 4px 10px; border: 1.5px dashed #1F1F1C; border-radius: 6px; background: #FFFFFF">HU-21 · C</span>
+</div>
+</div>
+
+<div style="flex-grow: 1; border: 2px solid #1F1F1C; border-radius: 12px; background: #FFFFFF; overflow: hidden; display: flex; flex-direction: column">
+<nav style="height: 64px; flex-shrink: 0; display: flex; align-items: center; gap: 20px; padding: 0 24px; border-bottom: 2px solid #1F1F1C">
+<div style="display: flex; align-items: center; gap: 10px">
+<div style="width: 36px; height: 36px; border: 2px solid #1F1F1C; border-radius: 8px; background: #ECEAE4"></div>
+<span style="font-size: 16px; font-weight: 700">Chapatas Lab</span>
+<span style="padding: 2px 8px; border: 1.5px solid #1F1F1C; border-radius: 6px; font-family: 'IBM Plex Mono', monospace; font-size: 11px">RESPONSABLE</span>
+</div>
+<div style="display: flex; gap: 4px; margin-left: 8px">
+<a href="AdminPanel.html" aria-current="page" style="padding: 10px 14px; border-radius: 8px; background: #1F1F1C; color: #FFFFFF; font-size: 15px; font-weight: 600; text-decoration: none">Panel</a>
+<a href="AdminPrestamos.html" style="padding: 10px 14px; border-radius: 8px; font-size: 15px; font-weight: 500; text-decoration: none">Préstamos</a>
+<a href="AdminInventario.html" style="padding: 10px 14px; border-radius: 8px; font-size: 15px; font-weight: 500; text-decoration: none">Inventario</a>
+<a href="AdminHistorial.html" style="padding: 10px 14px; border-radius: 8px; font-size: 15px; font-weight: 500; text-decoration: none">Historial</a>
+<a href="AdminReportes.html" style="padding: 10px 14px; border-radius: 8px; font-size: 15px; font-weight: 500; text-decoration: none">Reportes</a>
+</div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 12px">
+<button type="button" aria-label="Notificaciones, hay nuevas" style="position: relative; width: 40px; height: 40px; border: 2px solid #1F1F1C; border-radius: 8px; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F1F1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg><span style="position: absolute; top: -6px; right: -6px; width: 12px; height: 12px; border-radius: 50%; background: #1F1F1C; border: 2px solid #FFFFFF"></span></button>
+<div style="width: 36px; height: 36px; border: 2px solid #1F1F1C; border-radius: 50%; background: #ECEAE4"></div>
+<span style="font-size: 14px">[Responsable del laboratorio]</span>
+<a href="Login.html" style="padding: 8px 12px; border: 2px solid #1F1F1C; border-radius: 8px; font-size: 14px; text-decoration: none">Salir</a>
+</div>
+</nav>
+
+<main style="flex-grow: 1; padding: 20px 32px 24px; display: flex; flex-direction: column; gap: 18px">
+<div role="status" style="padding: 12px 16px; border: 2px solid #1F1F1C; border-radius: 10px; background: #ECEAE4; display: flex; align-items: center; gap: 14px">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F1F1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+<span style="flex-grow: 1; font-size: 15px"><strong>[Nombre del alumno]</strong> registró la devolución de [Nombre del material] hace [N] min.</span>
+<a href="#devoluciones" style="height: 40px; padding: 0 16px; display: flex; align-items: center; border: 2px solid #1F1F1C; border-radius: 8px; background: #FFFFFF; font-size: 14px; font-weight: 600; text-decoration: none">Revisar</a>
+<span style="font-family: Kalam, cursive; font-size: 14px; font-weight: 700; color: #9A3412; background: #FFEDD5; border: 1.5px solid #9A3412; border-radius: 999px; padding: 0 8px; line-height: 22px; white-space: nowrap">aviso · HU-21</span>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
+<section style="padding: 14px 18px; border: 3px solid #1F1F1C; border-radius: 10px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600; color: #3A3935">Solicitudes por aprobar</span><span style="font-size: 38px; font-weight: 700; line-height: 1.15">[N]</span></section>
+<section style="padding: 14px 18px; border: 3px solid #1F1F1C; border-radius: 10px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600; color: #3A3935">Devoluciones por confirmar</span><span style="font-size: 38px; font-weight: 700; line-height: 1.15">[N]</span></section>
+<a href="AdminPrestamos.html" style="padding: 14px 18px; border: 2px solid #1F1F1C; border-radius: 10px; display: flex; flex-direction: column; gap: 2px; text-decoration: none"><span style="font-size: 14px; font-weight: 600; color: #3A3935">Préstamos activos →</span><span style="font-size: 38px; font-weight: 700; line-height: 1.15">[N]</span></a>
+<a href="AdminPrestamos.html" style="padding: 14px 18px; border: 2px solid #1F1F1C; border-radius: 10px; background: #1F1F1C; color: #FFFFFF; display: flex; flex-direction: column; gap: 2px; text-decoration: none"><span style="font-size: 14px; font-weight: 600">Vencidos →</span><span style="font-size: 38px; font-weight: 700; line-height: 1.15">[N]</span></a>
+</div>
+
+<div style="display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 20px; align-items: start">
+<section style="display: flex; flex-direction: column; gap: 10px">
+<h2 style="margin: 0; font-size: 18px; font-weight: 700">Solicitudes por aprobar</h2>
+
+<article style="padding: 14px 16px; border: 2px solid #1F1F1C; border-radius: 10px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: baseline"><span style="font-size: 15px; font-weight: 700">[Nombre del alumno]</span><span style="font-size: 13px; color: #55534E">hace [N] min · folio [ID]</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 14px">
+<div style="display: flex; justify-content: space-between; align-items: center"><span>[Nombre del material] × 1</span><span style="display: flex; align-items: center; gap: 8px"><span aria-hidden="true" style="width: 80px; display: flex; gap: 2px"><span style="flex-grow: 1; height: 8px; border-radius: 2px; background: #1F1F1C"></span><span style="flex-grow: 1; height: 8px; border-radius: 2px; background: #1F1F1C"></span><span style="flex-grow: 1; height: 8px; border-radius: 2px; background: #1F1F1C"></span><span style="flex-grow: 1; height: 8px; box-sizing: border-box; border-radius: 2px; border: 1.5px solid #8A877F"></span><span style="flex-grow: 1; height: 8px; box-sizing: border-box; border-radius: 2px; border: 1.5px solid #8A877F"></span></span><span style="font-size: 13px">[3]/[5]</span></span></div>
+<div style="display: flex; justify-content: space-between; align-items: center"><span>[Nombre del material] × 1</span><span style="display: flex; align-items: center; gap: 8px"><span aria-hidden="true" style="width: 80px; display: flex; gap: 2px"><span style="flex-grow: 1; height: 8px; border-radius: 2px; background: #1F1F1C"></span><span style="flex-grow: 1; height: 8px; box-sizing: border-box; border-radius: 2px; border: 1.5px solid #8A877F"></span><span style="flex-grow: 1; height: 8px; box-sizing: border-box; border-radius: 2px; border: 1.5px solid #8A877F"></span><span style="flex-grow: 1; height: 8px; box-sizing: border-box; border-radius: 2px; border: 1.5px solid #8A877F"></span></span><span style="font-size: 13px; font-weight: 700">queda [1]</span></span></div>
+</div>
+<div style="display: flex; justify-content: flex-end; gap: 10px">
+<button type="button" style="height: 40px; padding: 0 16px; border: 2px solid #1F1F1C; border-radius: 8px; background: #FFFFFF; font-family: inherit; font-size: 14px; font-weight: 600">Rechazar…</button>
+<button type="button" style="height: 40px; padding: 0 18px; border: 2px solid #1F1F1C; border-radius: 8px; background: #1F1F1C; color: #FFFFFF; font-family: inherit; font-size: 14px; font-weight: 600">Aprobar</button>
+</div>
+</article>
+
+<article style="padding: 14px 16px; border: 2px solid #1F1F1C; border-radius: 10px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: baseline"><span style="font-size: 15px; font-weight: 700">[Nombre del profesor]</span><span style="font-size: 13px; color: #55534E">hace [N] min · folio [ID]</span></div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 14px"><span>[Nombre del material] × 2</span><span style="display: flex; align-items: center; gap: 8px"><span aria-hidden="true" style="width: 80px; display: flex; gap: 2px"><span style="flex-grow: 1; height: 8px; border-radius: 2px; background: #1F1F1C"></span><span style="flex-grow: 1; height: 8px; border-radius: 2px; background: #1F1F1C"></span><span style="flex-grow: 1; height: 8px; border-radius: 2px; background: #1F1F1C"></span><span style="flex-grow: 1; height: 8px; border-radius: 2px; background: #1F1F1C"></span></span><span style="font-size: 13px">[4]/[4]</span></span></div>
+<div style="display: flex; justify-content: flex-end; gap: 10px">
+<button type="button" style="height: 40px; padding: 0 16px; border: 2px solid #1F1F1C; border-radius: 8px; background: #FFFFFF; font-family: inherit; font-size: 14px; font-weight: 600">Rechazar…</button>
+<button type="button" style="height: 40px; padding: 0 18px; border: 2px solid #1F1F1C; border-radius: 8px; background: #1F1F1C; color: #FFFFFF; font-family: inherit; font-size: 14px; font-weight: 600">Aprobar</button>
+</div>
+</article>
+<span style="font-size: 13px; color: #55534E">Al aprobar se descuentan las existencias en la misma operación (RN7). «Rechazar…» pide un motivo.</span>
+</section>
+
+<section id="devoluciones" style="display: flex; flex-direction: column; gap: 10px">
+<h2 style="margin: 0; font-size: 18px; font-weight: 700">Devoluciones por confirmar</h2>
+<article style="padding: 14px 16px; border: 2px dashed #1F1F1C; border-radius: 10px; display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between; align-items: baseline"><span style="font-size: 15px; font-weight: 700">[Nombre del alumno]</span><span style="font-size: 13px; color: #55534E">registrada [dd/mm hh:mm]</span></div>
+<span style="font-size: 14px">[Nombre del material] · Registro [ID]</span>
+<div style="display: flex; justify-content: flex-end; gap: 10px">
+<button type="button" style="height: 40px; padding: 0 16px; border: 2px solid #1F1F1C; border-radius: 8px; background: #FFFFFF; font-family: inherit; font-size: 14px; font-weight: 600">Reportar problema</button>
+<button type="button" style="height: 40px; padding: 0 18px; border: 2px solid #1F1F1C; border-radius: 8px; background: #1F1F1C; color: #FFFFFF; font-family: inherit; font-size: 14px; font-weight: 600">Confirmar devolución</button>
+</div>
+</article>
+<article style="padding: 14px 16px; border: 2px dashed #1F1F1C; border-radius: 10px; display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between; align-items: baseline"><span style="font-size: 15px; font-weight: 700">[Nombre del alumno]</span><span style="font-size: 13px; color: #55534E">registrada [dd/mm hh:mm]</span></div>
+<span style="font-size: 14px">[Nombre del material] · Registro [ID]</span>
+<div style="display: flex; justify-content: flex-end; gap: 10px">
+<button type="button" style="height: 40px; padding: 0 16px; border: 2px solid #1F1F1C; border-radius: 8px; background: #FFFFFF; font-family: inherit; font-size: 14px; font-weight: 600">Reportar problema</button>
+<button type="button" style="height: 40px; padding: 0 18px; border: 2px solid #1F1F1C; border-radius: 8px; background: #1F1F1C; color: #FFFFFF; font-family: inherit; font-size: 14px; font-weight: 600">Confirmar devolución</button>
+</div>
+</article>
+<span style="font-size: 13px; color: #55534E">Confirmar cierra el préstamo y devuelve la unidad al inventario.</span>
+<span style="font-family: Kalam, cursive; font-size: 15px; font-weight: 700; color: #9A3412">«Reportar problema» → registra conservación (HU-19)</span>
+</section>
+</div>
+</main>
+</div>
+</div>
+</body>
+</html>

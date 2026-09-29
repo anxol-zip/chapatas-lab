@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Reportes mensuales</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Kalam:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#E9E7E1}
+a{color:#1F1F1C}a:hover{color:#000000}
+</style>
+</head>
+<body>
+<div style="width: 1280px; height: 1000px; box-sizing: border-box; padding: 20px 32px 32px; background: #F6F5F1; display: flex; flex-direction: column; gap: 12px; font-family: 'IBM Plex Sans', sans-serif; color: #1F1F1C">
+<div style="height: 44px; display: flex; align-items: center; justify-content: space-between">
+<div style="display: flex; align-items: baseline; gap: 12px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; color: #55534E">R-06 · COULD</span>
+<span style="font-size: 20px; font-weight: 700">Reportes mensuales</span>
+</div>
+<div style="display: flex; gap: 8px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; padding: 4px 10px; border: 1.5px dashed #1F1F1C; border-radius: 6px; background: #FFFFFF">HU-15 · C</span>
+</div>
+</div>
+
+<div style="flex-grow: 1; border: 2px solid #1F1F1C; border-radius: 12px; background: #FFFFFF; overflow: hidden; display: flex; flex-direction: column">
+<nav style="height: 64px; flex-shrink: 0; display: flex; align-items: center; gap: 20px; padding: 0 24px; border-bottom: 2px solid #1F1F1C">
+<div style="display: flex; align-items: center; gap: 10px">
+<div style="width: 36px; height: 36px; border: 2px solid #1F1F1C; border-radius: 8px; background: #ECEAE4"></div>
+<span style="font-size: 16px; font-weight: 700">Chapatas Lab</span>
+<span style="padding: 2px 8px; border: 1.5px solid #1F1F1C; border-radius: 6px; font-family: 'IBM Plex Mono', monospace; font-size: 11px">RESPONSABLE</span>
+</div>
+<div style="display: flex; gap: 4px; margin-left: 8px">
+<a href="AdminPanel.html" style="padding: 10px 14px; border-radius: 8px; font-size: 15px; font-weight: 500; text-decoration: none">Panel</a>
+<a href="AdminPrestamos.html" style="padding: 10px 14px; border-radius: 8px; font-size: 15px; font-weight: 500; text-decoration: none">Préstamos</a>
+<a href="AdminInventario.html" style="padding: 10px 14px; border-radius: 8px; font-size: 15px; font-weight: 500; text-decoration: none">Inventario</a>
+<a href="AdminHistorial.html" style="padding: 10px 14px; border-radius: 8px; font-size: 15px; font-weight: 500; text-decoration: none">Historial</a>
+<a href="AdminReportes.html" aria-current="page" style="padding: 10px 14px; border-radius: 8px; background: #1F1F1C; color: #FFFFFF; font-size: 15px; font-weight: 600; text-decoration: none">Reportes</a>
+</div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 12px">
+<div style="width: 36px; height: 36px; border: 2px solid #1F1F1C; border-radius: 50%; background: #ECEAE4"></div>
+<span style="font-size: 14px">[Responsable del laboratorio]</span>
+<a href="Login.html" style="padding: 8px 12px; border: 2px solid #1F1F1C; border-radius: 8px; font-size: 14px; text-decoration: none">Salir</a>
+</div>
+</nav>
+
+<main style="flex-grow: 1; padding: 20px 32px 24px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; align-items: flex-end; gap: 16px">
+<h1 style="margin: 0; font-size: 26px; font-weight: 700; margin-right: auto">Resumen de [Mes aaaa]</h1>
+<div style="width: 220px; display: flex; flex-direction: column; gap: 6px"><label for="mes" style="font-size: 15px; font-weight: 600">Mes</label><select id="mes" style="height: 44px; box-sizing: border-box; padding: 0 10px; border: 2px solid #1F1F1C; border-radius: 8px; font-family: inherit; font-size: 15px; background: #FFFFFF"><option>[Mes aaaa]</option></select></div>
+<button type="button" style="height: 44px; padding: 0 18px; border: 2px solid #1F1F1C; border-radius: 8px; background: #1F1F1C; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600">Exportar CSV</button>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
+<section style="padding: 14px 18px; border: 2px solid #1F1F1C; border-radius: 10px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600; color: #3A3935">Préstamos del mes</span><span style="font-size: 36px; font-weight: 700">[N]</span></section>
+<section style="padding: 14px 18px; border: 2px solid #1F1F1C; border-radius: 10px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600; color: #3A3935">Devueltos a tiempo</span><span style="font-size: 36px; font-weight: 700">[N] %</span></section>
+<section style="padding: 14px 18px; border: 2px solid #1F1F1C; border-radius: 10px; background: #1F1F1C; color: #FFFFFF; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600">Vencidos al cierre</span><span style="font-size: 36px; font-weight: 700">[N]</span></section>
+<section style="padding: 14px 18px; border: 2px solid #1F1F1C; border-radius: 10px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600; color: #3A3935">Retirados por daño</span><span style="font-size: 36px; font-weight: 700">[N]</span></section>
+</div>
+
+<div style="display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 20px; align-items: stretch">
+<section style="padding: 16px 18px; border: 2px solid #1F1F1C; border-radius: 10px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: baseline"><h2 style="margin: 0; font-size: 17px; font-weight: 700">Préstamos por semana</h2><span style="font-family: Kalam, cursive; font-size: 14px; font-weight: 700; color: #9A3412">alturas ilustrativas</span></div>
+<div role="img" aria-label="Gráfica de barras: préstamos por semana del mes" style="height: 260px; display: flex; align-items: flex-end; gap: 28px; padding: 0 12px; border-bottom: 2px solid #1F1F1C; border-left: 2px solid #1F1F1C">
+<div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><span style="font-size: 13px; font-weight: 600">[N]</span><div style="width: 100%; height: 120px; background: #8A877F; border-radius: 4px 4px 0 0"></div></div>
+<div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><span style="font-size: 13px; font-weight: 600">[N]</span><div style="width: 100%; height: 200px; background: #1F1F1C; border-radius: 4px 4px 0 0"></div></div>
+<div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><span style="font-size: 13px; font-weight: 600">[N]</span><div style="width: 100%; height: 150px; background: #8A877F; border-radius: 4px 4px 0 0"></div></div>
+<div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><span style="font-size: 13px; font-weight: 600">[N]</span><div style="width: 100%; height: 90px; background: #8A877F; border-radius: 4px 4px 0 0"></div></div>
+</div>
+<div style="display: flex; gap: 28px; padding: 0 14px; font-size: 13px; color: #3A3935"><span style="flex-grow: 1; text-align: center">Sem 1</span><span style="flex-grow: 1; text-align: center">Sem 2</span><span style="flex-grow: 1; text-align: center">Sem 3</span><span style="flex-grow: 1; text-align: center">Sem 4</span></div>
+</section>
+
+<section style="padding: 16px 18px; border: 2px solid #1F1F1C; border-radius: 10px; display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-size: 17px; font-weight: 700">Materiales más pedidos</h2>
+<div style="display: grid; grid-template-columns: 24px minmax(0, 1fr) 150px 40px; gap: 10px; align-items: center; font-size: 14px"><span style="font-family: 'IBM Plex Mono', monospace">1</span><span>[Nombre del material]</span><div style="height: 12px; border-radius: 2px; background: #1F1F1C"></div><span style="text-align: right">[N]</span></div>
+<div style="display: grid; grid-template-columns: 24px minmax(0, 1fr) 150px 40px; gap: 10px; align-items: center; font-size: 14px"><span style="font-family: 'IBM Plex Mono', monospace">2</span><span>[Nombre del material]</span><div style="width: 78%; height: 12px; border-radius: 2px; background: #1F1F1C"></div><span style="text-align: right">[N]</span></div>
+<div style="display: grid; grid-template-columns: 24px minmax(0, 1fr) 150px 40px; gap: 10px; align-items: center; font-size: 14px"><span style="font-family: 'IBM Plex Mono', monospace">3</span><span>[Nombre del material]</span><div style="width: 60%; height: 12px; border-radius: 2px; background: #1F1F1C"></div><span style="text-align: right">[N]</span></div>
+<div style="display: grid; grid-template-columns: 24px minmax(0, 1fr) 150px 40px; gap: 10px; align-items: center; font-size: 14px"><span style="font-family: 'IBM Plex Mono', monospace">4</span><span>[Nombre del material]</span><div style="width: 45%; height: 12px; border-radius: 2px; background: #1F1F1C"></div><span style="text-align: right">[N]</span></div>
+<div style="display: grid; grid-template-columns: 24px minmax(0, 1fr) 150px 40px; gap: 10px; align-items: center; font-size: 14px"><span style="font-family: 'IBM Plex Mono', monospace">5</span><span>[Nombre del material]</span><div style="width: 30%; height: 12px; border-radius: 2px; background: #1F1F1C"></div><span style="text-align: right">[N]</span></div>
+</section>
+</div>
+
+<div style="padding: 14px 16px; border: 2px dashed #9A3412; border-radius: 10px; display: flex; gap: 12px; align-items: center">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; padding: 4px 10px; border: 1.5px dashed #9A3412; border-radius: 6px; color: #9A3412">HU-17 · W</span>
+<span style="font-size: 14px; line-height: 1.5">El cobro del material no devuelto queda <strong>fuera de alcance</strong>. Este reporte muestra los vencidos; cobrar le toca a la universidad.</span>
+</div>
+</main>
+</div>
+</div>
+</body>
+</html>

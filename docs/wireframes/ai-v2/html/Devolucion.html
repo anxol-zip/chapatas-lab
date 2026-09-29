@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Registrar devolución</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Kalam:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#E9E7E1}
+a{color:#1F1F1C}a:hover{color:#000000}
+</style>
+</head>
+<body>
+<div style="width: 1280px; height: 1000px; box-sizing: border-box; padding: 20px 32px 32px; background: #F6F5F1; display: flex; flex-direction: column; gap: 12px; font-family: 'IBM Plex Sans', sans-serif; color: #1F1F1C">
+<div style="height: 44px; display: flex; align-items: center; justify-content: space-between">
+<div style="display: flex; align-items: baseline; gap: 12px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; color: #55534E">A-08 · DIÁLOGO SOBRE INICIO</span>
+<span style="font-size: 20px; font-weight: 700">Registrar devolución</span>
+</div>
+<div style="display: flex; gap: 8px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; padding: 4px 10px; border: 1.5px solid #1F1F1C; border-radius: 6px; background: #FFFFFF">HU-10 · M</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; padding: 4px 10px; border: 1.5px solid #1F1F1C; border-radius: 6px; background: #FFFFFF">HU-14 · S</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; padding: 4px 10px; border: 1.5px solid #1F1F1C; border-radius: 6px; background: #FFFFFF">RNF-02 · S</span>
+</div>
+</div>
+
+<div style="flex-grow: 1; border: 2px solid #1F1F1C; border-radius: 12px; background: #FFFFFF; overflow: hidden; display: flex; flex-direction: column; position: relative">
+<nav style="height: 64px; flex-shrink: 0; display: flex; align-items: center; gap: 24px; padding: 0 24px; border-bottom: 2px solid #1F1F1C">
+<div style="display: flex; align-items: center; gap: 10px">
+<div style="width: 36px; height: 36px; border: 2px solid #1F1F1C; border-radius: 8px; background: #ECEAE4"></div>
+<span style="font-size: 16px; font-weight: 700">Chapatas Lab</span>
+</div>
+<div style="display: flex; gap: 8px; margin-left: 16px">
+<span style="padding: 10px 16px; border-radius: 8px; background: #1F1F1C; color: #FFFFFF; font-size: 15px; font-weight: 600">Inicio</span>
+<span style="padding: 10px 16px; font-size: 15px">Catálogo</span>
+<span style="padding: 10px 16px; font-size: 15px">Historial</span>
+</div>
+</nav>
+<div aria-hidden="true" style="flex-grow: 1; padding: 24px 32px; display: flex; flex-direction: column; gap: 18px">
+<div style="height: 48px; border-radius: 10px; background: #ECEAE4"></div>
+<div style="width: 280px; height: 28px; border-radius: 6px; background: #ECEAE4"></div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px"><div style="height: 110px; border-radius: 10px; background: #ECEAE4"></div><div style="height: 110px; border-radius: 10px; background: #ECEAE4"></div><div style="height: 110px; border-radius: 10px; background: #ECEAE4"></div></div>
+<div style="height: 300px; border-radius: 10px; background: #ECEAE4"></div>
+</div>
+
+<div style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: rgba(31, 31, 28, 0.55); display: flex; align-items: center; justify-content: center">
+<section role="dialog" aria-modal="true" aria-labelledby="dlg-titulo" style="width: 600px; box-sizing: border-box; padding: 26px 28px; border: 3px solid #1F1F1C; border-radius: 14px; background: #FFFFFF; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start">
+<h2 id="dlg-titulo" style="margin: 0; font-size: 22px; font-weight: 700">Registrar devolución</h2>
+<a href="Inicio.html" aria-label="Cerrar" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border: 2px solid #1F1F1C; border-radius: 8px; font-size: 20px; text-decoration: none">×</a>
+</div>
+<div style="display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 16px; align-items: center">
+<div style="height: 72px; border: 1.5px solid #8A877F; border-radius: 6px; background: #ECEAE4; overflow: hidden"><svg width="100%" height="100%" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="0" x2="100%" y2="100%" stroke="#A8A59C" stroke-width="1.5"></line><line x1="100%" y1="0" x2="0" y2="100%" stroke="#A8A59C" stroke-width="1.5"></line></svg></div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 17px; font-weight: 700">[Nombre del material]</span>
+<span style="font-size: 13px; color: #55534E">Registro [ID] · prestado el [dd/mm] · vence [dd/mm]</span>
+</div>
+</div>
+<label style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.45">
+<input type="checkbox" style="width: 24px; height: 24px; margin: 0; flex-shrink: 0; accent-color: #1F1F1C">
+<span>Confirmo que entregué el material en el mostrador del laboratorio.</span>
+</label>
+<div style="padding: 12px 14px; border: 2px dashed #1F1F1C; border-radius: 8px; font-size: 14px; line-height: 1.5; color: #3A3935">Tu préstamo quedará <strong>«Devolución por confirmar»</strong> hasta que el responsable revise el material. Te avisaremos cuando se cierre.</div>
+<div style="display: flex; justify-content: flex-end; gap: 12px">
+<a href="Inicio.html" style="height: 48px; padding: 0 22px; display: flex; align-items: center; border: 2px solid #1F1F1C; border-radius: 8px; font-size: 16px; font-weight: 600; text-decoration: none">Cancelar</a>
+<a href="Inicio.html" style="height: 48px; padding: 0 24px; display: flex; align-items: center; border-radius: 8px; background: #1F1F1C; color: #FFFFFF; font-size: 16px; font-weight: 600; text-decoration: none">Registrar devolución</a>
+</div>
+<div style="display: flex; gap: 8px; flex-wrap: wrap">
+<span style="font-family: Kalam, cursive; font-size: 14px; font-weight: 700; color: #9A3412; background: #FFEDD5; border: 1.5px solid #9A3412; border-radius: 999px; padding: 0 8px; line-height: 22px">teclado: foco atrapado, Esc cierra</span>
+<span style="font-family: Kalam, cursive; font-size: 14px; font-weight: 700; color: #9A3412; background: #FFEDD5; border: 1.5px solid #9A3412; border-radius: 999px; padding: 0 8px; line-height: 22px">2.5.8 · casilla 24 px</span>
+<span style="font-family: Kalam, cursive; font-size: 14px; font-weight: 700; color: #9A3412; background: #FFEDD5; border: 1.5px solid #9A3412; border-radius: 999px; padding: 0 8px; line-height: 22px">regla HU-10 → HU-05</span>
+</div>
+</section>
+</div>
+</div>
+</div>
+</body>
+</html>

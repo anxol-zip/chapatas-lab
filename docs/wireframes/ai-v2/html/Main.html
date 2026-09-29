@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Flujo de pantallas</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Kalam:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#E9E7E1}
+a{color:#1F1F1C}a:hover{color:#000000}
+</style>
+</head>
+<body>
+<div style="width: 1800px; height: 1100px; box-sizing: border-box; background: #F6F5F1; font-family: 'IBM Plex Sans', sans-serif; color: #1F1F1C; position: relative">
+<header style="position: absolute; left: 60px; top: 30px; right: 60px; display: flex; justify-content: space-between; align-items: flex-start; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; color: #55534E">CHAPATAS LAB · WIREFRAME LO-FI · AI V2</span>
+<h1 style="margin: 0; font-size: 30px; font-weight: 700">Préstamo de material — flujo completo</h1>
+<span style="font-size: 14px; color: #3A3935">15 pantallas · 20 de 21 historias con pantalla (HU-17 es Won't) · RNF-01, 02 y 05 dibujados</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; row-gap: 8px; font-size: 14px; color: #3A3935">
+<div style="display: flex; align-items: center; gap: 10px"><svg width="44" height="10" aria-hidden="true"><line x1="0" y1="5" x2="44" y2="5" stroke="#1F1F1C" stroke-width="2"></line></svg><span>acción que dispara el cambio</span></div>
+<div style="display: flex; align-items: center; gap: 10px"><svg width="44" height="10" aria-hidden="true"><line x1="0" y1="5" x2="44" y2="5" stroke="#9A3412" stroke-width="2" stroke-dasharray="6 5"></line></svg><span>camino de error y regreso</span></div>
+<div style="display: flex; align-items: center; gap: 10px"><svg width="44" height="10" aria-hidden="true"><line x1="0" y1="5" x2="44" y2="5" stroke="#1F1F1C" stroke-width="2.5" stroke-dasharray="1 6" stroke-linecap="round"></line></svg><span>dato que cruza al otro rol</span></div>
+<div style="display: flex; align-items: center; gap: 10px"><svg width="44" height="10" aria-hidden="true"><line x1="0" y1="5" x2="44" y2="5" stroke="#8A877F" stroke-width="4"></line></svg><span>barra de navegación del rol</span></div>
+</div>
+</header>
+
+<div style="position: absolute; left: 0; top: 140px; width: 1800px; height: 540px; background: #EFEDE7"></div>
+<span style="position: absolute; left: 1560px; top: 156px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; color: #55534E">ALUMNO / PROFESOR</span>
+<div style="position: absolute; left: 0; top: 720px; width: 1800px; height: 370px; background: #EFEDE7"></div>
+<span style="position: absolute; left: 1440px; top: 1056px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; color: #55534E">RESPONSABLE DEL LABORATORIO</span>
+
+<svg width="1800" height="1100" style="position: absolute; left: 0; top: 0" aria-hidden="true">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1F1C"></path></marker>
+<marker id="ahe" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9A3412"></path></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A877F"></path></marker>
+</defs>
+<g fill="none" stroke="#8A877F" stroke-width="4">
+<path d="M470,770 L1670,770"></path>
+</g>
+<g fill="none" stroke="#8A877F" stroke-width="2">
+<path d="M470,770 L470,796" marker-end="url(#ahg)"></path>
+<path d="M770,770 L770,796" marker-end="url(#ahg)"></path>
+<path d="M1070,770 L1070,796" marker-end="url(#ahg)"></path>
+<path d="M1370,770 L1370,796" marker-end="url(#ahg)"></path>
+<path d="M1670,770 L1670,796" marker-end="url(#ahg)"></path>
+</g>
+<g fill="none" stroke="#1F1F1C" stroke-width="2">
+<path d="M280,400 L356,400" marker-end="url(#ah)"></path>
+<path d="M170,460 L170,516" marker-end="url(#ah)"></path>
+<path d="M280,580 L770,580 L770,464" marker-end="url(#ah)"></path>
+<path d="M584,400 L656,400" marker-start="url(#ah)" marker-end="url(#ah)"></path>
+<path d="M770,340 L770,274" marker-end="url(#ah)"></path>
+<path d="M470,340 L470,274" marker-end="url(#ah)"></path>
+<path d="M880,400 L956,400" marker-end="url(#ah)"></path>
+<path d="M1180,400 L1256,400" marker-end="url(#ah)"></path>
+<path d="M1370,460 L1370,660 L540,660 L540,464" marker-end="url(#ah)"></path>
+<path d="M1120,516 L1120,464" marker-end="url(#ah)"></path>
+<path d="M60,400 L35,400 L35,860 L356,860" marker-end="url(#ah)"></path>
+<path d="M1070,920 L1070,956" marker-end="url(#ah)"></path>
+</g>
+<g fill="none" stroke="#9A3412" stroke-width="2" stroke-dasharray="7 6">
+<path d="M1030,460 L1030,516" marker-end="url(#ahe)"></path>
+</g>
+<g fill="none" stroke="#1F1F1C" stroke-width="2.5" stroke-dasharray="1 7" stroke-linecap="round">
+<path d="M1480,400 L1530,400 L1530,700 L560,700 L560,796" marker-end="url(#ah)"></path>
+<path d="M360,210 L15,210 L15,900 L356,900" marker-end="url(#ah)"></path>
+</g>
+<g font-family="Kalam, cursive" font-size="16" font-weight="700" style="paint-order: stroke; stroke: #EFEDE7; stroke-width: 6px; stroke-linejoin: round">
+<text x="318" y="390" text-anchor="middle" fill="#1F1F1C">alumno</text>
+<text x="180" y="494" fill="#1F1F1C">sin préstamos</text>
+<text x="640" y="570" text-anchor="middle" fill="#1F1F1C">«Ir al catálogo»</text>
+<text x="620" y="390" text-anchor="middle" fill="#1F1F1C">pestañas</text>
+<text x="780" y="316" fill="#1F1F1C">pestaña Historial</text>
+<text x="462" y="316" text-anchor="end" fill="#1F1F1C">«Registrar devolución»</text>
+<text x="918" y="390" text-anchor="middle" fill="#1F1F1C">«Agregar»</text>
+<text x="1218" y="390" text-anchor="middle" fill="#1F1F1C">«Enviar»</text>
+<text x="745" y="650" text-anchor="middle" fill="#1F1F1C">queda «Pendiente de aprobación» en Inicio</text>
+<text x="1128" y="496" fill="#1F1F1C">«Quitar»</text>
+<text x="1022" y="496" text-anchor="end" fill="#9A3412">sin existencias</text>
+<text x="200" y="850" text-anchor="middle" fill="#1F1F1C">responsable</text>
+<text x="200" y="892" text-anchor="middle" fill="#1F1F1C">devolución por confirmar</text>
+<text x="1045" y="692" text-anchor="middle" fill="#1F1F1C">solicitud por aprobar (HU-04)</text>
+<text x="1080" y="946" fill="#1F1F1C">«Nuevo material» · «Editar»</text>
+<text x="1070" y="760" text-anchor="middle" fill="#55534E">Panel · Préstamos · Inventario · Historial · Reportes</text>
+</g>
+</svg>
+
+<a href="Devolucion.html" style="position: absolute; left: 360px; top: 150px; width: 220px; height: 120px; box-sizing: border-box; padding: 12px 14px; border: 2px solid #1F1F1C; border-radius: 10px; background: #FFFFFF; text-decoration: none; color: #1F1F1C; display: flex; flex-direction: column; gap: 5px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #55534E">A-08 · DIÁLOGO</span>
+<span style="font-size: 17px; font-weight: 700">Registrar devolución</span>
+<span style="font-size: 12px; color: #3A3935">Queda por confirmar</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500">HU-10 · HU-14</span>
+</a>
+<a href="Historial.html" style="position: absolute; left: 660px; top: 150px; width: 220px; height: 120px; box-sizing: border-box; padding: 12px 14px; border: 2px solid #1F1F1C; border-radius: 10px; background: #FFFFFF; text-decoration: none; color: #1F1F1C; display: flex; flex-direction: column; gap: 5px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #55534E">A-09</span>
+<span style="font-size: 17px; font-weight: 700">Mi historial</span>
+<span style="font-size: 12px; color: #3A3935">Activos y cerrados</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500">HU-13 · RNF-01</span>
+</a>
+<a href="Login.html" style="position: absolute; left: 60px; top: 340px; width: 220px; height: 120px; box-sizing: border-box; padding: 12px 14px; border: 2px solid #1F1F1C; border-radius: 10px; background: #FFFFFF; text-decoration: none; color: #1F1F1C; display: flex; flex-direction: column; gap: 5px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #55534E">A-01</span>
+<span style="font-size: 17px; font-weight: 700">Inicio de sesión</span>
+<span style="font-size: 12px; color: #3A3935">El rol decide la vista</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500">RNF-01</span>
+</a>
+<a href="Inicio.html" style="position: absolute; left: 360px; top: 340px; width: 220px; height: 120px; box-sizing: border-box; padding: 12px 14px; border: 2px solid #1F1F1C; border-radius: 10px; background: #FFFFFF; text-decoration: none; color: #1F1F1C; display: flex; flex-direction: column; gap: 5px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #55534E">A-02</span>
+<span style="font-size: 17px; font-weight: 700">Inicio</span>
+<span style="font-size: 12px; color: #3A3935">Préstamos y fecha límite</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500">HU-08 · HU-10 · HU-20</span>
+</a>
+<a href="Catalogo.html" style="position: absolute; left: 660px; top: 340px; width: 220px; height: 120px; box-sizing: border-box; padding: 12px 14px; border: 2px solid #1F1F1C; border-radius: 10px; background: #FFFFFF; text-decoration: none; color: #1F1F1C; display: flex; flex-direction: column; gap: 5px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #55534E">A-04</span>
+<span style="font-size: 17px; font-weight: 700">Catálogo</span>
+<span style="font-size: 12px; color: #3A3935">Existencias y descripción</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500">HU-06 · 07 · 12 · RNF-05</span>
+</a>
+<a href="Solicitud.html" style="position: absolute; left: 960px; top: 340px; width: 220px; height: 120px; box-sizing: border-box; padding: 12px 14px; border: 2px solid #1F1F1C; border-radius: 10px; background: #FFFFFF; text-decoration: none; color: #1F1F1C; display: flex; flex-direction: column; gap: 5px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #55534E">A-05</span>
+<span style="font-size: 17px; font-weight: 700">Mi solicitud</span>
+<span style="font-size: 12px; color: #3A3935">Varios materiales, una solicitud</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500">HU-09 · HU-16 · HU-08</span>
+</a>
+<a href="SolicitudEnviada.html" style="position: absolute; left: 1260px; top: 340px; width: 220px; height: 120px; box-sizing: border-box; padding: 12px 14px; border: 2px solid #1F1F1C; border-radius: 10px; background: #FFFFFF; text-decoration: none; color: #1F1F1C; display: flex; flex-direction: column; gap: 5px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #55534E">A-07</span>
+<span style="font-size: 17px; font-weight: 700">Solicitud enviada</span>
+<span style="font-size: 12px; color: #3A3935">Confirmación y estado</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500">HU-14 · HU-04</span>
+</a>
+<a href="InicioVacio.html" style="position: absolute; left: 60px; top: 520px; width: 220px; height: 120px; box-sizing: border-box; padding: 12px 14px; border: 2px dashed #1F1F1C; border-radius: 10px; background: #FFFFFF; text-decoration: none; color: #1F1F1C; display: flex; flex-direction: column; gap: 5px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #55534E">A-03 · ESTADO VACÍO</span>
+<span style="font-size: 17px; font-weight: 700">Inicio sin préstamos</span>
+<span style="font-size: 12px; color: #3A3935">Primera visita</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500">HU-08</span>
+</a>
+<a href="ErrorExistencias.html" style="position: absolute; left: 960px; top: 520px; width: 220px; height: 120px; box-sizing: border-box; padding: 12px 14px; border: 2px dashed #9A3412; border-radius: 10px; background: #FFFFFF; text-decoration: none; color: #1F1F1C; display: flex; flex-direction: column; gap: 5px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #9A3412">A-06 · ESTADO DE ERROR</span>
+<span style="font-size: 17px; font-weight: 700">Sin existencias</span>
+<span style="font-size: 12px; color: #3A3935">Alguien pidió la última</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500">RNF-05 · RN7</span>
+</a>
+
+<a href="AdminPanel.html" style="position: absolute; left: 360px; top: 800px; width: 220px; height: 120px; box-sizing: border-box; padding: 12px 14px; border: 2px solid #1F1F1C; border-radius: 10px; background: #FFFFFF; text-decoration: none; color: #1F1F1C; display: flex; flex-direction: column; gap: 5px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #55534E">R-01</span>
+<span style="font-size: 17px; font-weight: 700">Panel</span>
+<span style="font-size: 12px; color: #3A3935">Aprobar y confirmar</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500">HU-04 · 05 · 11 · 21</span>
+</a>
+<a href="AdminPrestamos.html" style="position: absolute; left: 660px; top: 800px; width: 220px; height: 120px; box-sizing: border-box; padding: 12px 14px; border: 2px solid #1F1F1C; border-radius: 10px; background: #FFFFFF; text-decoration: none; color: #1F1F1C; display: flex; flex-direction: column; gap: 5px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #55534E">R-02</span>
+<span style="font-size: 17px; font-weight: 700">Préstamos activos</span>
+<span style="font-size: 12px; color: #3A3935">Quién tiene qué</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500">HU-11 · HU-05</span>
+</a>
+<a href="AdminInventario.html" style="position: absolute; left: 960px; top: 800px; width: 220px; height: 120px; box-sizing: border-box; padding: 12px 14px; border: 2px solid #1F1F1C; border-radius: 10px; background: #FFFFFF; text-decoration: none; color: #1F1F1C; display: flex; flex-direction: column; gap: 5px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #55534E">R-03</span>
+<span style="font-size: 17px; font-weight: 700">Inventario</span>
+<span style="font-size: 12px; color: #3A3935">Existencias y conservación</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500">HU-02 · HU-19</span>
+</a>
+<a href="AdminHistorial.html" style="position: absolute; left: 1260px; top: 800px; width: 220px; height: 120px; box-sizing: border-box; padding: 12px 14px; border: 2px solid #1F1F1C; border-radius: 10px; background: #FFFFFF; text-decoration: none; color: #1F1F1C; display: flex; flex-direction: column; gap: 5px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #55534E">R-05</span>
+<span style="font-size: 17px; font-weight: 700">Historial general</span>
+<span style="font-size: 12px; color: #3A3935">Por persona o material</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500">HU-01 · RNF-01</span>
+</a>
+<a href="AdminReportes.html" style="position: absolute; left: 1560px; top: 800px; width: 220px; height: 120px; box-sizing: border-box; padding: 12px 14px; border: 2px dashed #1F1F1C; border-radius: 10px; background: #FFFFFF; text-decoration: none; color: #1F1F1C; display: flex; flex-direction: column; gap: 5px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #55534E">R-06 · COULD</span>
+<span style="font-size: 17px; font-weight: 700">Reportes</span>
+<span style="font-size: 12px; color: #3A3935">Resumen del mes</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500">HU-15</span>
+</a>
+<a href="AdminMaterial.html" style="position: absolute; left: 960px; top: 960px; width: 220px; height: 120px; box-sizing: border-box; padding: 12px 14px; border: 2px solid #1F1F1C; border-radius: 10px; background: #FFFFFF; text-decoration: none; color: #1F1F1C; display: flex; flex-direction: column; gap: 5px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #55534E">R-04</span>
+<span style="font-size: 17px; font-weight: 700">Alta / edición</span>
+<span style="font-size: 12px; color: #3A3935">Descripción, cantidad, estado</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500">HU-03 · 18 · 19</span>
+</a>
+</div>
+</body>
+</html>
